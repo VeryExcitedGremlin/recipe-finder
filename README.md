@@ -1,3 +1,5 @@
+###### Run `npm run deploy` to deploy, view at https://veryexcitedgremlin.github.io/recipe-finder/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
