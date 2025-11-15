@@ -1,3 +1,7 @@
+body {
+    background: linear-gradient(135deg, #E079C0 0%, #B2E079 100%);
+}
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -9,7 +13,12 @@ li {
   list-style-type: none;
 }
 
-#sweets-dropdown {
-  border-radius: 0 6px 6px 0;
-  /* border-radius: 6px 0 0 6px; */
+.btn {
+    background-color: #B2E079;
+    border: solid 2px #56614A;
+    color: black;
+}
+
+.card {
+    border: solid 3px #554961;
 }

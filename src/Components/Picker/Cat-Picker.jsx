@@ -13,10 +13,10 @@ export default function CategoryPicker({ handlers }) {
     <>
       <Container>
         <Row>
-          <ButtonGroup>
-            <Button onClick={handleLunch}>Lunch</Button>
-            <Button onClick={handleDinner}>Dinner</Button>
-            <Button onClick={handleSweets}>Sweets</Button>
+          <ButtonGroup className="my-3">
+            <Button className="btn" id='lunch-btn' onClick={handleLunch}>Lunch</Button>
+            <Button className="btn" id='dinner-btn' onClick={handleDinner}>Dinner</Button>
+            <Button className="btn" id='sweets-btn' onClick={handleSweets}>Sweets</Button>
           </ButtonGroup>
         </Row>
       </Container>

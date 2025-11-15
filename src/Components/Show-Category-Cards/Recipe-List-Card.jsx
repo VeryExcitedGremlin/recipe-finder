@@ -9,7 +9,7 @@ export default function RecipeListCard({ recipe }) {
     const { name, link, img, description } = recipe;
     return (
       <Col>
-          <Card style={{ minWidth: "9rem" }}>
+          <Card style={{ minWidth: "9rem" }} className="m-3">
             <Card.Img variant="top" src={img} />
             <Card.Body>
               <Card.Title>{name}</Card.Title>

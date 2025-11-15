@@ -4,7 +4,7 @@ import Col from "react-bootstrap/Col";
 
 export default function Header() {
   return (
-    <Container>
+    <Container className="bookend">
       <Row className="align-items-end justify-content-center">
         <Col xs="auto">
           <h1>Recipe Finder</h1>
