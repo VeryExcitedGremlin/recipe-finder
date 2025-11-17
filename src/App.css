@@ -24,16 +24,26 @@ li {
   border-color: #56614a !important;
 }
 
-/* .btn:active, .active, #filter {
-  --bs-btn-active-bg: #56614a;
-  --bs-btn-active-border-color: #56614a;
-}
-
-.btn:hover, .btn:focus-visible {
-  --bs-btn-hover-bg: #56614a;
-  --bs-btn-hover-border-color: #56614a;
-} */
-
 .card {
   border: solid 3px #554961;
+}
+
+ol li {
+  list-style-type: decimal;
+}
+
+.outer-section {
+    background-color: rgb(255, 250, 243);
+    border-radius: 2em;
+    padding: 2em;
+    margin: 3em 0;
+    filter: drop-shadow(0em 0em 0.5em rgba(0, 0, 0, 0.205));
+}
+
+.inner-section {
+    background-color: rgb(255, 236, 214);
+    border: 0.5em solid bisque;
+    border-radius: 1em;
+    padding: 3em 2em;
+    margin: 1em;
 }

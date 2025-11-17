@@ -1,5 +1,4 @@
 // react bootstrap
-import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import Dropdown from "react-bootstrap/Dropdown";
 import DropdownButton from "react-bootstrap/DropdownButton";
@@ -15,8 +14,7 @@ export default function CatPickerSecondary({ filters, handleFilter }) {
 
   return (
     <>
-      <Row className="justify-content-end">
-        <Col xs="auto">
+        <Col xs="3">
           <DropdownButton id="dropdown" title="Filter">
             <Dropdown.Item onClick={() => handleFilter('')} key={0}>
               All
@@ -24,7 +22,6 @@ export default function CatPickerSecondary({ filters, handleFilter }) {
             {dropdown}
           </DropdownButton>
         </Col>
-      </Row>
     </>
   );
 }

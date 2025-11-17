@@ -29,17 +29,14 @@ export default function ShowCategoryCards({ category }) {
   if (data) {
     let newData;
     if (useFilter) {
-      newData = data.filter(
-        (recipe) =>
-        {
-          if (!recipe.filter) {
-            handleFilter("");
-            return
-          } else {
-            return recipe.filter.includes(useFilter);
-          }
+      newData = data.filter((recipe) => {
+        if (!recipe.filter) {
+          handleFilter("");
+          return;
+        } else {
+          return recipe.filter.includes(useFilter);
         }
-      );
+      });
     } else {
       newData = data;
     }
@@ -59,13 +56,21 @@ export default function ShowCategoryCards({ category }) {
 
     return (
       <Container>
-        {!filters.length || (
-          <CatPickerSecondary filters={filters} handleFilter={handleFilter} />
-        )}
-        <Row>
-          <h2>{capitalizeFirstLetter(category)}</h2>
+        <Row
+          className={
+            !filters.length ? "justify-content-center" : "justify-content-end"
+          }
+        >
+          <h2 className="col-6">
+            {capitalizeFirstLetter(useFilter || category)}
+          </h2>
+          {!filters.length || (
+            <CatPickerSecondary filters={filters} handleFilter={handleFilter} />
+          )}
         </Row>
-        <Row className="justify-content-center">{cards ? cards : ""}</Row>
+        <Row className="justify-content-center inner-section">
+          {cards ? cards : ""}
+        </Row>
       </Container>
     );
   }

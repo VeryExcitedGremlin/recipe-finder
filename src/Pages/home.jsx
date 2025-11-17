@@ -5,9 +5,9 @@ import ShowCategoryCards from "../Components/Show-Category-Cards/Show-Category-C
 
 export default function HomePage({handlers, category}) {
     return (
-      <>
+      <div className="outer-section">
         <CategoryPicker handlers={handlers} category={category} />
         <ShowCategoryCards category={category} />
-      </>
+      </div>
     );
 }

@@ -2,20 +2,22 @@
 //   name: "",
 //   ingredients: {"": ""},
 //   instructions: [""],
+//   notes: [""],
 // },
 
-const lunch = [
-  {
+const lunch = {
+  "Chicken-Fried-Rice": {
     name: "Chicken Fried Rice",
     ingredients: {
-      "rice, cooked": "3 cups",
       "chicken breast, diced": "3/4 lb",
       butter: "1 tbsp",
-      "sesame oil": "1 tbsp",
+      "sesame oil": "2 tbsp",
+      "onion, chopped small": 1,
       "peas and carrots": "1 1/3 cups",
       "green onions, chopped": "3",
       "garlic, minced": "2 cloves",
       eggs: "2",
+      "rice, cooked": "3 cups",
       "soy-sauce": "3 tbsp",
       "salt and pepper": "To taste",
     },
@@ -23,17 +25,19 @@ const lunch = [
       "Heat butter over medium-high heat, add chicken once hot",
       "Season with salt and pepper and saute until cooked through, about 5-6 minutes",
       "Transfer chicken to a plate and set aside",
-      "Add sesame oil to pan. Once hot add veggies except garlic and saute 1 minute",
+      "Add half of the sesame oil to the pan. Once hot add onion and caramelize",
+      "Add remaining sesame oil, peas and carrots, saute 1 minute",
       "Add garlic and saute 1 minute longer",
       "Push veggies to the side, add eggs and scramble",
       "Return the chicken, add rice and soy sauce. Season to taste",
       "Heat and stir 1-2 minutes until combined",
-      "Serve and enjoy",
+      "Serve and enjoy!",
     ],
+    notes: [""],
   },
-];
-const dinner = [
-  {
+};
+const dinner = {
+  "Beef-Stroganoff": {
     name: "Beef Stroganoff",
     ingredients: {
       "steak, cut into strips": "1 lb",
@@ -45,7 +49,7 @@ const dinner = [
       "garlic, minced": "2 cloves",
       "all-purpose flour": "1 tbsp",
       "beef broth": "1 cup",
-      "yogurt or 1 part sour cream + 3 parts heavy cream": "1 cup",
+      "yogurt": "1 cup",
       "worcestershire sauce": "1 tbsp",
       "dijon mustart": "1/2 tsp",
       "salt and pepper": "To taste",
@@ -64,10 +68,13 @@ const dinner = [
       "Return the beef and any juices back to the pan, simmer until beef is heated through",
       "Serve over egg noodles",
     ],
+    notes: [
+      'You can substitute the yogurt for 1/4 cup sour cream + 3/4 cups heavy cream'
+      ]
   },
-];
-const sweets = [
-  {
+};
+const sweets = {
+  "Chocolate-Chip-Cookies": {
     name: "Chocolate Chip Cookies",
     ingredients: {
       "salted butter": "8 tablespoons",
@@ -92,8 +99,9 @@ const sweets = [
       "Let cool on the pan until stiff (about 30 minutes).",
       "Enjoy!",
     ],
+    notes: [""],
   },
-  {
+  Pancakes: {
     name: "Pancakes",
     ingredients: {
       "All-purpose flour": "1 1/2 cups",
@@ -112,8 +120,9 @@ const sweets = [
       "Flip and cook until browned.",
       "Repeat with remaining batter, makes about 8.",
     ],
+    notes: [""],
   },
-];
+};
 
 export default {
   lunch: lunch,

@@ -1,9 +1,13 @@
 import { useReducer } from "react";
+import { Routes, Route } from "react-router-dom";
+
+import "./App.css";
+
 import Header from "./Components/Header/Header";
 import PersonalFooter from "./Components/Footer/personal-footer";
-import "./App.css";
-import { Routes, Route } from "react-router-dom";
+
 import HomePage from "./Pages/home";
+import Recipe from "./Pages/show-recipe";
 
 function App() {
   const initialState = {
@@ -33,21 +37,12 @@ function App() {
 
   function handleLunch() {
     dispatch({ type: "LUNCH" });
-    // document.getElementById('lunch-btn').classList.add('active')
-    // document.getElementById("dinner-btn").classList.remove("active");
-    // document.getElementById("sweets-btn").classList.remove("active");
   }
   function handleDinner() {
     dispatch({ type: "DINNER" });
-    // document.getElementById("dinner-btn").classList.add("active");
-    // document.getElementById("lunch-btn").classList.remove("active");
-    // document.getElementById("sweets-btn").classList.remove("active");
   }
   function handleSweets() {
     dispatch({ type: "SWEETS" });
-    // document.getElementById("sweets-btn").classList.add("active");
-    // document.getElementById("dinner-btn").classList.remove("active");
-    // document.getElementById("lunch-btn").classList.remove("active");
   }
   const handlers = [handleLunch, handleDinner, handleSweets];
 
@@ -59,8 +54,11 @@ function App() {
           path="/recipe-finder"
           element={<HomePage category={state.category} handlers={handlers} />}
         />
+        <Route
+          path="/recipe-finder/recipe/:recipeId"
+          element={<Recipe category={state.category} />}
+        />
       </Routes>
-      {/* </ShowCategoryCards> */}
       <PersonalFooter />
     </>
   );
