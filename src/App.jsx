@@ -1,10 +1,9 @@
 import { useReducer } from "react";
 import Header from "./Components/Header/Header";
 import PersonalFooter from "./Components/Footer/personal-footer";
-import CategoryPicker from "./Components/Picker/Cat-Picker";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import ShowCategoryCards from "./Components/Show-Category-Cards/Show-Category-Cards";
+import HomePage from "./Pages/home";
 
 function App() {
   const initialState = {
@@ -34,23 +33,33 @@ function App() {
 
   function handleLunch() {
     dispatch({ type: "LUNCH" });
+    // document.getElementById('lunch-btn').classList.add('active')
+    // document.getElementById("dinner-btn").classList.remove("active");
+    // document.getElementById("sweets-btn").classList.remove("active");
   }
   function handleDinner() {
     dispatch({ type: "DINNER" });
+    // document.getElementById("dinner-btn").classList.add("active");
+    // document.getElementById("lunch-btn").classList.remove("active");
+    // document.getElementById("sweets-btn").classList.remove("active");
   }
   function handleSweets() {
     dispatch({ type: "SWEETS" });
+    // document.getElementById("sweets-btn").classList.add("active");
+    // document.getElementById("dinner-btn").classList.remove("active");
+    // document.getElementById("lunch-btn").classList.remove("active");
   }
   const handlers = [handleLunch, handleDinner, handleSweets];
 
   return (
     <>
       <Header />
-      {/* <Routes>
-        <Route path='/' element={} />
-      </Routes> */}
-      <CategoryPicker handlers={handlers} />
-      <ShowCategoryCards category={state.category} />
+      <Routes>
+        <Route
+          path="/recipe-finder"
+          element={<HomePage category={state.category} handlers={handlers} />}
+        />
+      </Routes>
       {/* </ShowCategoryCards> */}
       <PersonalFooter />
     </>

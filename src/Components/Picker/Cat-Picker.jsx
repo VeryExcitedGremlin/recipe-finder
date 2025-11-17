@@ -6,7 +6,7 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 import Dropdown from "react-bootstrap/Dropdown";import DropdownButton from "react-bootstrap/DropdownButton";
 
 
-export default function CategoryPicker({ handlers }) {
+export default function CategoryPicker({ handlers, category }) {
     const [handleLunch, handleDinner, handleSweets] = handlers;
     // const [handleLunch, handleDinner, handleBreakfast, handleDessert] = handlers;
   return (
@@ -14,9 +14,27 @@ export default function CategoryPicker({ handlers }) {
       <Container>
         <Row>
           <ButtonGroup className="my-3">
-            <Button className="btn" id='lunch-btn' onClick={handleLunch}>Lunch</Button>
-            <Button className="btn" id='dinner-btn' onClick={handleDinner}>Dinner</Button>
-            <Button className="btn" id='sweets-btn' onClick={handleSweets}>Sweets</Button>
+            <Button
+              className={category == "lunch" ? "btn active" : "btn"}
+              id="lunch-btn"
+              onClick={handleLunch}
+            >
+              Lunch
+            </Button>
+            <Button
+              className={category == "dinner" ? "btn active" : "btn"}
+              id="dinner-btn"
+              onClick={handleDinner}
+            >
+              Dinner
+            </Button>
+            <Button
+              className={category == "sweets" ? "btn active" : "btn"}
+              id="sweets-btn"
+              onClick={handleSweets}
+            >
+              Sweets
+            </Button>
           </ButtonGroup>
         </Row>
       </Container>

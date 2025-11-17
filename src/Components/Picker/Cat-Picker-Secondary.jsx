@@ -9,18 +9,21 @@ import capitalizeFirstLetter from "../../Helpers/Capitalize-first";
 
 export default function CatPickerSecondary({ filters, handleFilter }) {
 
-  const dropdown = filters.map((filter, i) => (
-    <Dropdown.Item onClick={() => handleFilter(filter)} key={i}>{capitalizeFirstLetter(filter)}</Dropdown.Item>
+  const dropdown = filters.sort().map((filter, i) => (
+    <Dropdown.Item onClick={() => handleFilter(filter)} key={i++}>{capitalizeFirstLetter(filter)}</Dropdown.Item>
   ));
 
   return (
     <>
       <Row className="justify-content-end">
-          <Col xs='auto'>
-              <DropdownButton id="dropdown" title="Filter">
-                {dropdown}
-              </DropdownButton>
-          </Col>
+        <Col xs="auto">
+          <DropdownButton id="dropdown" title="Filter">
+            <Dropdown.Item onClick={() => handleFilter('')} key={0}>
+              All
+            </Dropdown.Item>
+            {dropdown}
+          </DropdownButton>
+        </Col>
       </Row>
     </>
   );

@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #E079C0 0%, #B2E079 100%);
+  background: linear-gradient(135deg, #e079c0 0%, #b2e079 100%);
 }
 
 #root {
@@ -14,11 +14,26 @@ li {
 }
 
 .btn {
-    background-color: #B2E079;
-    border: solid 2px #56614A;
-    color: black;
+  background-color: #b2e079;
+  border: solid 2px #56614a;
+  color: black;
 }
 
+.btn:active, .active, .btn:hover, .btn.show{
+  background-color: #56614a !important;
+  border-color: #56614a !important;
+}
+
+/* .btn:active, .active, #filter {
+  --bs-btn-active-bg: #56614a;
+  --bs-btn-active-border-color: #56614a;
+}
+
+.btn:hover, .btn:focus-visible {
+  --bs-btn-hover-bg: #56614a;
+  --bs-btn-hover-border-color: #56614a;
+} */
+
 .card {
-    border: solid 3px #554961;
+  border: solid 3px #554961;
 }
