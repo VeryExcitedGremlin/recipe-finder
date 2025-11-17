@@ -14,7 +14,7 @@ export default function CatPickerSecondary({ filters, handleFilter }) {
 
   return (
     <>
-        <Col xs="3">
+        <Col xs="6" sm='3'>
           <DropdownButton id="dropdown" title="Filter">
             <Dropdown.Item onClick={() => handleFilter('')} key={0}>
               All

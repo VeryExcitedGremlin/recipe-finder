@@ -61,14 +61,14 @@ export default function ShowCategoryCards({ category }) {
             !filters.length ? "justify-content-center" : "justify-content-end"
           }
         >
-          <h2 className="col-6">
+          <h2 className="col-6 mb-4">
             {capitalizeFirstLetter(useFilter || category)}
           </h2>
           {!filters.length || (
             <CatPickerSecondary filters={filters} handleFilter={handleFilter} />
           )}
         </Row>
-        <Row className="justify-content-center inner-section">
+        <Row className="justify-content-center inner-section" style={{borderRadius: '0 0 2em 2em'}}>
           {cards ? cards : ""}
         </Row>
       </Container>

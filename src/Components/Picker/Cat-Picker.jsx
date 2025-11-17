@@ -11,9 +11,9 @@ export default function CategoryPicker({ handlers, category }) {
     // const [handleLunch, handleDinner, handleBreakfast, handleDessert] = handlers;
   return (
     <>
-      <Container>
-        <Row>
-          <ButtonGroup className="my-3">
+      {/* <Container> */}
+        <Row className="p-3 pt-4">
+          <ButtonGroup>
             <Button
               className={category == "lunch" ? "btn active" : "btn"}
               id="lunch-btn"
@@ -37,7 +37,7 @@ export default function CategoryPicker({ handlers, category }) {
             </Button>
           </ButtonGroup>
         </Row>
-      </Container>
+      {/* </Container> */}
     </>
   );
 }
