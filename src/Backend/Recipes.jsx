@@ -70,7 +70,6 @@ const dinner = {
     ],
     notes: [
       'You can substitute the yogurt for 1/4 cup sour cream + 3/4 cups heavy cream',
-      'For the broth, I usually use 1 cup of water and shake in some beef bullion powder',
       'Serve over mashed potatos instead for a super creamy and delicious twist on a classic'
       ]
   },

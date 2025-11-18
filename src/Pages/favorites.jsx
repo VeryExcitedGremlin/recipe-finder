@@ -2,10 +2,8 @@ import CategoryPicker from "../Components/Picker/Cat-Picker";
 
 import ShowCategoryCards from "../Components/Show-Category-Cards/Show-Category-Cards";
 
-export default function HomePage({ handlers, category }) {
+export default function Favorites({ handlers, category }) {
 //   const [ categoryHandlers, favoriteHandlers ] = handlers;
-    // const [handleLunch, handleDinner, handleSweets] = handlers;
-    // handleLunch();
   return (
     <div className="outer-section">
       <CategoryPicker 
@@ -15,7 +13,7 @@ export default function HomePage({ handlers, category }) {
       <ShowCategoryCards
         // handlers={favoriteHandlers}
         category={category}
-        favorites={false}
+        favorites={true}
       />
     </div>
   );

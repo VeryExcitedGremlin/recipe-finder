@@ -3,21 +3,31 @@ import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
 import { Link } from "react-router-dom";
 
-export default function Header() {
+export default function Header({handleLunch}) {
   return (
     <Container className="bookend">
       <Row className="align-items-center justify-content-around">
         <Col xs="auto">
-          <h1>Recipe Finder</h1>
+          <h1>
+            <i className="fa-solid fa-blender pe-3"></i>Recipe Finder
+          </h1>
         </Col>
         <Col xs="auto">
           <nav>
             <Row>
               <Col>
-                <li><Link to='/recipe-finder'>Home</Link></li>
+                <li>
+                  <Link onClick={handleLunch} to="/recipe-finder">
+                    Home
+                  </Link>
+                </li>
               </Col>
               <Col>
-                <li>Favorites</li>
+                <li>
+                  <Link onClick={handleLunch} to="/recipe-finder/favorites">
+                    Favorites
+                  </Link>
+                </li>
               </Col>
             </Row>
           </nav>
@@ -26,3 +36,5 @@ export default function Header() {
     </Container>
   );
 }
+
+// /recipe-finder/favorites

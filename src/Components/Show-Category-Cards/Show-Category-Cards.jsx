@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import FalseAPI from "../../Backend/FalseApi";
 import RecipeListCard from "./Recipe-List-Card";
 import CatPickerSecondary from "../Picker/Cat-Picker-Secondary";
+import CardPalceholder from "./Placeholder";
 
 //helpers
 import capitalizeFirstLetter from "../../Helpers/Capitalize-first";
@@ -12,19 +13,20 @@ import capitalizeFirstLetter from "../../Helpers/Capitalize-first";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 
-export default function ShowCategoryCards({ category }) {
+export default function ShowCategoryCards({ category, favorites }) {
   const [data, setData] = useState();
   const [useFilter, setUseFilter] = useState("");
+  const [triggerRender, setTriggerRender] = useState(true);
 
   function handleFilter(newFilter) {
     setUseFilter(newFilter);
   }
 
   useEffect(() => {
-    FalseAPI(category).then((response) => {
+    FalseAPI(category, favorites).then((response) => {
       setData(response.data);
     });
-  }, [category]);
+  }, [category, triggerRender]);
 
   if (data) {
     let newData;
@@ -40,9 +42,16 @@ export default function ShowCategoryCards({ category }) {
     } else {
       newData = data;
     }
+
     const cards = newData.map((recipe, i) => (
-      <RecipeListCard key={i} recipe={recipe} />
+      <RecipeListCard
+        key={i}
+        recipe={recipe}
+        rerender={[triggerRender, setTriggerRender]}
+      />
     ));
+
+    // console.log(!cards[0])
 
     function checkFilters() {
       data.forEach((recipe) => {
@@ -69,7 +78,7 @@ export default function ShowCategoryCards({ category }) {
           )}
         </Row>
         <Row className="justify-content-center inner-section" style={{borderRadius: '0 0 2em 2em'}}>
-          {cards ? cards : ""}
+          {cards[0] ? cards : <CardPalceholder />}
         </Row>
       </Container>
     );

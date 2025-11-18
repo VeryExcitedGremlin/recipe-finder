@@ -40,28 +40,44 @@ export default function Recipe({ category }) {
         </Row>
 
         <Row className="justify-content-center">
-          
-          <Col xs="auto" sm="6">
-            <Row className="justify-content-center">
-              <h2 className="col-12 col-sm-8 py-4 text-start">Ingredients</h2>
-            </Row>
-            <Row className="justify-content-center">
-              <ul className="col-auto col-sm-8">{ingredientsList}</ul>
-            </Row>
-          </Col>
 
           {notes[0] == "" || (
             <Col sm="6">
               <Row className="justify-content-center">
-                <h2 className="col-10 col-sm-8 py-1 py-sm-4 text-start">
+                <h2 className="col-10 col-sm-8 pt-4 pb-1 text-start">
                   Notes
                 </h2>
               </Row>
+              
               <Row className="justify-content-center">
                 <ul className="col-10 col-sm-8">{notesList}</ul>
               </Row>
             </Col>
           )}
+          <Col xs="auto" sm="6">
+            <Row className="justify-content-center">
+              <h2
+                className={
+                  notes[0] == ""
+                    ? "col-6 py-4 text-start"
+                    : "col-12 col-sm-11 col-md-9 col-lg-7 col-xl-5 ps-4 ps-sm-0 pt-4 pb-2 text-start"
+                }
+              >
+                Ingredients
+              </h2>
+            </Row>
+            <Row className="justify-content-center">
+              <ul
+                className={
+                  notes[0] == ""
+                    ? "col-auto"
+                    : "col-auto col-sm-11 col-md-9 col-lg-7 col-xl-5 ps-4 ps-sm-0"
+                }
+              >
+                {ingredientsList}
+              </ul>
+            </Row>
+          </Col>
         </Row>
 
         <Row
