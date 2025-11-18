@@ -9,6 +9,7 @@ import PersonalFooter from "./Components/Footer/personal-footer";
 import HomePage from "./Pages/home";
 import Favorites from "./Pages/favorites";
 import Recipe from "./Pages/show-recipe";
+import NotFound from "./Pages/404";
 
 function App() {
   const initialState = {
@@ -84,6 +85,10 @@ function App() {
         <Route
           path="/recipe-finder/recipe/:recipeId"
           element={<Recipe category={state.category} />}
+        />
+        <Route
+          path="/recipe-finder/*"
+          element={<NotFound />}
         />
       </Routes>
       <PersonalFooter />
