@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 // componenets
 import FalseAPI from "../../Backend/FalseApi";
-import RecipeListCard from "./Recipe-List-Card";
+import RecipeListCard from "./Recipe-Cat-Card";
 import CatPickerSecondary from "../Picker/Cat-Picker-Secondary";
 import CardPalceholder from "./Placeholder";
 
@@ -13,20 +13,35 @@ import capitalizeFirstLetter from "../../Helpers/Capitalize-first";
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
 
-export default function ShowCategoryCards({ category, favorites }) {
+export default function ShowCategoryCards({ category, favoritesPage }) {
   const [data, setData] = useState();
   const [useFilter, setUseFilter] = useState("");
-  const [triggerRender, setTriggerRender] = useState(true);
+
+  let faves = JSON.parse(localStorage.getItem("favoritesList"));
+  const [favorites, setFavorites] = useState(faves || []);
 
   function handleFilter(newFilter) {
     setUseFilter(newFilter);
   }
 
+  function handleAdd(name) {
+    setFavorites((prev) => [...prev, name]);
+  }
+  function handleRemove(name) {
+    const index = favorites.indexOf(name);
+    if (index > -1) {
+      const toRemove = favorites.splice(index, 1);
+      const newFavorites = favorites.filter((item) => item !== toRemove);
+      setFavorites(newFavorites);
+    }
+  }
+  const handlers = [handleAdd, handleRemove];
+
   useEffect(() => {
-    FalseAPI(category, favorites).then((response) => {
+    FalseAPI(category, favoritesPage, favorites).then((response) => {
       setData(response.data);
     });
-  }, [category, triggerRender]);
+  }, [category, favorites]);
 
   if (data) {
     let newData;
@@ -47,7 +62,8 @@ export default function ShowCategoryCards({ category, favorites }) {
       <RecipeListCard
         key={i}
         recipe={recipe}
-        rerender={[triggerRender, setTriggerRender]}
+        handlers={handlers}
+        favorites={favorites}
       />
     ));
 
@@ -77,7 +93,10 @@ export default function ShowCategoryCards({ category, favorites }) {
             <CatPickerSecondary filters={filters} handleFilter={handleFilter} />
           )}
         </Row>
-        <Row className="justify-content-center inner-section" style={{borderRadius: '0 0 2em 2em'}}>
+        <Row
+          className="justify-content-center inner-section"
+          style={{ borderRadius: "0 0 2em 2em" }}
+        >
           {cards[0] ? cards : <CardPalceholder />}
         </Row>
       </Container>

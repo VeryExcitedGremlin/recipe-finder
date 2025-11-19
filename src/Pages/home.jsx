@@ -15,7 +15,7 @@ export default function HomePage({ handlers, category }) {
       <ShowCategoryCards
         // handlers={favoriteHandlers}
         category={category}
-        favorites={false}
+        favoritesPage={false}
       />
     </div>
   );

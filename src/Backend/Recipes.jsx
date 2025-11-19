@@ -13,7 +13,7 @@ const lunch = {
       butter: "4-8 tbsp",
       "sesame oil": "2 tbsp",
       "onion, chopped small": 1,
-      "peas and carrots": "1 1/3 cups",
+      "peas and carrots, frozen mix": "1 1/3 cups",
       "green onions, chopped": "3",
       "garlic, minced": "2 cloves",
       eggs: "2",

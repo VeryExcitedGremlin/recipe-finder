@@ -48,27 +48,6 @@ function App() {
   }
 
   const handlers = [handleLunch, handleDinner, handleSweets];
-  // const categoryHandlers = [handleLunch, handleDinner, handleSweets];
-
-  // function handleAdd(name) {
-  //   const faves = JSON.parse(localStorage.getItem("favoritesList"));
-  //   const newFaves = [...faves, name];
-  //   localStorage.setItem("favoritesList", JSON.stringify(newFaves));
-  //   console.log("add");
-  // }
-  // function handleRemove(name) {
-  //   const faves = JSON.parse(localStorage.getItem("favoritesList"));
-  //   const index = faves.indexOf(name);
-  //   if (index > -1) {
-  //     faves.splice(index, 1);
-  //   }
-  //   localStorage.setItem("favoritesList", JSON.stringify(faves));
-  //   console.log("remove");
-  // }
-
-  // const favoriteHandlers = [handleAdd, handleRemove];
-
-  // const handlers = [categoryHandlers, favoriteHandlers];
 
   return (
     <>
@@ -86,10 +65,10 @@ function App() {
           path="/recipe-finder/recipe/:recipeId"
           element={<Recipe category={state.category} />}
         />
-        <Route
+        {/* <Route
           path="/recipe-finder/*"
           element={<NotFound />}
-        />
+        /> */}
       </Routes>
       <PersonalFooter />
     </>

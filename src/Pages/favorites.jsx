@@ -6,14 +6,15 @@ export default function Favorites({ handlers, category }) {
 //   const [ categoryHandlers, favoriteHandlers ] = handlers;
   return (
     <div className="outer-section">
-      <CategoryPicker 
+      <CategoryPicker
         handlers={handlers}
-    //   handlers={categoryHandlers} 
-      category={category} />
+        //   handlers={categoryHandlers}
+        category={category}
+      />
       <ShowCategoryCards
         // handlers={favoriteHandlers}
         category={category}
-        favorites={true}
+        favoritesPage={true}
       />
     </div>
   );
