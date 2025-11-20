@@ -32,6 +32,16 @@ ol li {
   list-style-type: decimal;
 }
 
+i {
+  color:#614A5A;
+  z-index: 3;
+  /* border: solid #614A5A; */
+}
+
+Link {
+  z-index: 100;
+}
+
 .outer-section {
     background-color: rgb(255, 250, 243);
     border-radius: 2em;

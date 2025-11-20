@@ -65,10 +65,10 @@ function App() {
           path="/recipe-finder/recipe/:recipeId"
           element={<Recipe category={state.category} />}
         />
-        {/* <Route
+        <Route
           path="/recipe-finder/*"
           element={<NotFound />}
-        /> */}
+        />
       </Routes>
       <PersonalFooter />
     </>

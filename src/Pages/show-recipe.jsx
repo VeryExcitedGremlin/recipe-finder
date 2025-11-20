@@ -39,21 +39,8 @@ export default function Recipe({ category }) {
           <h1 className="py-2">{name}</h1>
         </Row>
 
-        <Row className="justify-content-center">
+        <Row className="justify-content-center p-3">
 
-          {notes[0] == "" || (
-            <Col sm="6">
-              <Row className="justify-content-center">
-                <h2 className="col-10 col-sm-8 pt-4 pb-1 text-start">
-                  Notes
-                </h2>
-              </Row>
-              
-              <Row className="justify-content-center">
-                <ul className="col-10 col-sm-8">{notesList}</ul>
-              </Row>
-            </Col>
-          )}
           <Col xs="auto" sm="6">
             <Row className="justify-content-center">
               <h2
@@ -78,6 +65,19 @@ export default function Recipe({ category }) {
               </ul>
             </Row>
           </Col>
+          {notes[0] == "" || (
+            <Col sm="6">
+              <Row className="justify-content-center">
+                <h2 className="col col-sm-10 pt-4 pb-1 text-start">
+                  Notes
+                </h2>
+              </Row>
+              
+              <Row className="justify-content-center">
+                <ul className="col col-sm-10">{notesList}</ul>
+              </Row>
+            </Col>
+          )}
         </Row>
 
         <Row
