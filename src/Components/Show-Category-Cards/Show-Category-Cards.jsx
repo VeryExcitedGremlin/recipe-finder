@@ -12,17 +12,18 @@ import capitalizeFirstLetter from "../../Helpers/Capitalize-first";
 // react bootstrap
 import Container from "react-bootstrap/esm/Container";
 import Row from "react-bootstrap/esm/Row";
+import Spinner from "react-bootstrap/Spinner";
 
-export default function ShowCategoryCards({ category, favoritesPage }) {
+export default function ShowCategoryCards({
+  category,
+  favoritesPage,
+  passFilter,
+}) {
   const [data, setData] = useState();
-  const [useFilter, setUseFilter] = useState("");
+  const [useFilter, handleFilter] = passFilter;
 
   let faves = JSON.parse(localStorage.getItem("favoritesList"));
   const [favorites, setFavorites] = useState(faves || []);
-
-  function handleFilter(newFilter) {
-    setUseFilter(newFilter);
-  }
 
   function handleAdd(name) {
     setFavorites((prev) => [...prev, name]);
@@ -38,25 +39,32 @@ export default function ShowCategoryCards({ category, favoritesPage }) {
   const handlers = [handleAdd, handleRemove];
 
   useEffect(() => {
+    const spinner = document.getElementById("spinner");
+    const showCards = document.getElementById("cards");
+    if (spinner && showCards) {
+      spinner.style.display = "block";
+      showCards.style.display = "none";
+    }
     FalseAPI(category, favoritesPage, favorites).then((response) => {
       setData(response.data);
+      if (spinner && showCards) {
+        spinner.style.display = "none";
+        showCards.style.display = "block";
+      }
     });
   }, [category, favorites]);
 
   if (data) {
-    let newData;
-    if (useFilter) {
-      newData = data.filter((recipe) => {
-        if (!recipe.filter) {
-          handleFilter("");
-          return;
-        } else {
+    function filterData(data) {
+      if (useFilter) {
+        return data.filter((recipe) => {
           return recipe.filter.includes(useFilter);
-        }
-      });
-    } else {
-      newData = data;
+        });
+      } else {
+        return data;
+      }
     }
+    const newData = filterData(data);
 
     const cards = newData.map((recipe, i) => (
       <RecipeListCard
@@ -70,34 +78,41 @@ export default function ShowCategoryCards({ category, favoritesPage }) {
     // console.log(!cards[0])
 
     function checkFilters() {
+      let filters = [];
       data.forEach((recipe) => {
         if (recipe.filter) {
           filters = [...new Set([...filters, ...recipe.filter])];
         }
       });
+      return filters;
     }
-    let filters = [];
-    checkFilters();
+    const filters = checkFilters();
 
     return (
       <Container>
         <Row
           className={
-            !filters.length ? "justify-content-center" : "justify-content-end"
+            filters[0] ? "justify-content-end" : "justify-content-center"
           }
         >
           <h2 className="col-6 mb-4">
             {capitalizeFirstLetter(useFilter || category)}
           </h2>
-          {!filters.length || (
+          {!filters[0] || (
             <CatPickerSecondary filters={filters} handleFilter={handleFilter} />
           )}
         </Row>
         <Row
+          id="card-container"
           className="justify-content-center inner-section"
           style={{ borderRadius: "0 0 2em 2em" }}
         >
-          {cards[0] ? cards : <CardPalceholder />}
+          <Spinner
+            id="spinner"
+            animation="border"
+            style={{ display: "none", color: "#e079c0" }}
+          />
+          <div id="cards">{cards[0] ? cards : <CardPalceholder />}</div>
         </Row>
       </Container>
     );

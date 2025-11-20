@@ -32,10 +32,15 @@ ol li {
   list-style-type: decimal;
 }
 
-i {
+.fa-lg {
   color:#614A5A;
   z-index: 3;
-  /* border: solid #614A5A; */
+}
+
+.favorite {
+  background-color: w;
+  border-radius: 30px;
+  height: 3.25em;
 }
 
 Link {
@@ -45,9 +50,6 @@ Link {
 .outer-section {
     background-color: rgb(255, 250, 243);
     border-radius: 2em;
-    /* width: 90vw;
-    box-sizing: border-box; */
-    /* padding: 2em; */
     margin: 3em 0;
     filter: drop-shadow(0em 0em 0.5em rgba(0, 0, 0, 0.205));
 }
@@ -55,9 +57,5 @@ Link {
 .inner-section {
     background-color: rgb(255, 236, 214);
     border: 0.5em solid bisque;
-    /* border-radius: 1em; */
-    /* width: 80vw;
-    box-sizing: border-box; */
     padding: 2em 1em;
-    /* margin: 1em; */
 }

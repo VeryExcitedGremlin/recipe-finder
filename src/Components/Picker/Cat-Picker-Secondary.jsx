@@ -12,6 +12,7 @@ export default function CatPickerSecondary({ filters, handleFilter }) {
     <Dropdown.Item onClick={() => handleFilter(filter)} key={i++}>{capitalizeFirstLetter(filter)}</Dropdown.Item>
   ));
 
+
   return (
     <>
         <Col xs="6" sm='3'>
