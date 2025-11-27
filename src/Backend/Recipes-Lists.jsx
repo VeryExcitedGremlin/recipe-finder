@@ -1,5 +1,12 @@
-// {name: '', link: '', img: 'https://placehold.co/40', description: ''}
-const placeholder = 'https://placehold.co/50'
+// {
+//   name: '', 
+//   link: '', 
+//   img: placeholder, 
+//   description: '', 
+//   filter: ['']
+// },
+
+const placeholder = "https://placehold.co/50";
 
 const lunch = [
   {
@@ -16,6 +23,14 @@ const dinner = [
     link: "Beef-Stroganoff",
     img: placeholder,
     description: "My go-to favorite! Easy and delicious.",
+    filter: ["beef", "noodles"],
+  },
+  {
+    name: "Whole Turkey",
+    link: "Whole-Turkey",
+    img: placeholder,
+    description: "Great for the holidays!",
+    filter: ["holiday", "whole bird"],
   },
 ];
 

@@ -1,4 +1,4 @@
-// {
+// : {
 //   name: "",
 //   ingredients: {"": ""},
 //   instructions: [""],
@@ -49,7 +49,7 @@ const dinner = {
       "garlic, minced": "2 cloves",
       "all-purpose flour": "1 tbsp",
       "beef broth": "1 cup",
-      "yogurt": "1 cup",
+      yogurt: "1 cup",
       "worcestershire sauce": "1 tbsp",
       "dijon mustart": "1/2 tsp",
       "salt and pepper": "To taste",
@@ -69,9 +69,29 @@ const dinner = {
       "Serve over egg noodles",
     ],
     notes: [
-      'You can substitute the yogurt for 1/4 cup sour cream + 3/4 cups heavy cream',
-      'Serve over mashed potatos instead for a super creamy and delicious twist on a classic'
-      ]
+      "You can substitute the yogurt for 1/4 cup sour cream + 3/4 cups heavy cream",
+      "Serve over mashed potatos instead for a super creamy and delicious twist on a classic",
+    ],
+  },
+  "Whole-Turkey": {
+    name: "Whole Turkey",
+    ingredients: {
+      "whole turkey": "14 lbs",
+      "olive oil": "1 tablespoon",
+      sage: "1 tablespoon",
+      "garlic powder": "2 teaspoons",
+      paprika: "2 teaspoons",
+      "salt and pepper": "To taste",
+    },
+    instructions: [
+      "Place oven rack in lowest position. Preheat oven to 325°F",
+      "Place turkey in pan breast-side up and brush with oil. Sprinkle seasoning mixture evenly over turkey. Cover loosely with heavy duty foil",
+      "Roast 2 hours, adding an extra 15 minutes per pound for larger turkeys",
+      "Remove foil. Roast 1 hour longer or until internal temperature in thigh reaches 165°F, basting occasionally with pan juices",
+      "Remove turkey from oven. Let stand 20 minutes",
+      " Transfer to platter or carving board and slice. Reserve pan juices to make gravy or to serve with turkey",
+    ],
+    notes: ["For easy cleanup, line roasting pan with heavy duty foil"],
   },
 };
 const sweets = {

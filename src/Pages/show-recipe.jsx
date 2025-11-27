@@ -8,8 +8,8 @@ import content from "../Backend/Recipes";
 
 export default function Recipe({ category }) {
   const { recipeId } = useParams();
-  const { name, ingredients, instructions, notes } =
-    content[category][recipeId];
+  const recipe = content[category][recipeId];
+  const {name, ingredients, instructions, notes} = recipe 
 
   const ingredientKeys = Object.keys(ingredients);
   const ingredientsList = ingredientKeys.map((ingredient, i) => (
