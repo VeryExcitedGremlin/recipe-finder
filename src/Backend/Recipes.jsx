@@ -99,6 +99,7 @@ const dinner = {
       "soy sauce": "1/2 cup",
       "lime juice": "1/2 cup",
       "avocado oil": "1/2 cup",
+      "red wine": "1/4 cup",
       "brown sugar, packed": "1/4 cup",
       "chili powder": "1 tablespoon",
       "garlic, minced": "3 cloves",
@@ -112,7 +113,7 @@ const dinner = {
       "tortillas, sour cream, and shredded cheese": "For serving",
     },
     instructions: [
-      "Mix the Marinade: Combine soy sauce, lime juice, canola oil, brown sugar, chili powder, garlic, cumin, and black pepper in a medium bowl and whisk to combine. Transfer 1/2 cup (120ml) marinade to a large bowl and set aside.",
+      "Mix the Marinade: Combine soy sauce, lime juice, avocado oil, red wine, brown sugar, chili powder, garlic, cumin, and black pepper in a medium bowl and whisk to combine. Transfer 3/4 cup (120ml) marinade to a large bowl and set aside.",
       "Place steaks in a gallon-sized zipper-lock bag and add remaining marinade. Seal bag, squeezing out as much air as possible. Massage bag until meat is fully coated in marinade. Lay flat in the refrigerator, turning every couple of hours, for at least 3 hours and up to 10.",
       "Toss peppers and onion in bowl with reserved 1/2 cup marinade. Refrigerate until ready to use.",
       "When ready to cook, pour marinade from steak into a cast iron skillet and heat.",
@@ -121,7 +122,7 @@ const dinner = {
       "Sprinkle the corn starch over the vegitables and stir well, avoiding clumps.",
       "Pour in beef broth, scraping any bits from the bottom of the pan",
       "Add back the beef and any accumulated juices, stir until warm.",
-      "Warm tortillas for serving. Enjoy!"
+      "Warm tortillas for serving. Enjoy!",
     ],
     notes: [""],
   },
