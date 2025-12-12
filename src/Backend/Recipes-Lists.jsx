@@ -32,6 +32,13 @@ const dinner = [
     description: "Great for the holidays!",
     filter: ["holiday", "whole bird"],
   },
+  {
+    name: 'Steak Fajitas',
+    link: 'Steak-Fajitas',
+    img: placeholder,
+    description: 'Prep the night before for tender marinated steak.',
+    filter: ['marinade', 'beef', 'peppers']
+  },
 ];
 
 const sweets = [
