@@ -1,14 +1,21 @@
+// React
 import { useReducer } from "react";
 import { Routes, Route } from "react-router-dom";
 
+// Styling
 import "./App.css";
 
+// components
 import Header from "./Components/Header/Header";
 import PersonalFooter from "./Components/Footer/personal-footer";
 
+// Pages
 import HomePage from "./Pages/home";
 import Recipe from "./Pages/show-recipe";
 import NotFound from "./Pages/404";
+
+// Helpers
+import ScrollToTop from "./Helpers/Scroll-to-Top";
 
 function App() {
   const initialState = {
@@ -50,6 +57,7 @@ function App() {
 
   return (
     <>
+    <ScrollToTop />
       <Header handleLunch={handleLunch} />
       <Routes>
         <Route
