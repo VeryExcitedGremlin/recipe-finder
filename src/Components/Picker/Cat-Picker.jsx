@@ -12,7 +12,7 @@ export default function CategoryPicker({ handlers, category, handleFilter }) {
   return (
     <>
       {/* <Container> */}
-      <Row className="p-3 pt-4">
+      <Row className="p-2 pt-4">
         <ButtonGroup>
           <Button
             className={category == "lunch" ? "btn active" : "btn"}

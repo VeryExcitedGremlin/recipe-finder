@@ -14,29 +14,17 @@ export default function RecipeListCard({ recipe, handlers, favorites }) {
     const recipeLink = `recipe/${link}`
     
     return (
-      <Col>
+      <Col xs="12" sm="6" md='4' lg='3'>
         <Card className="m-3">
           <Card.Header>
             <Row className="justify-content-end">
               <Col xs="auto">
                 {favorited ? (
-                  // <Button
-                  //   className="favorite"
-                  //   onClick={() => handleRemove(name)}
-                  // >
-                  //   <i className="fa-solid fa-heart-circle-minus fa-lg"></i>
-                  // </Button>
                   <i
                     className="fa-solid fa-heart-circle-minus fa-lg"
                     onClick={() => handleRemove(name)}
                   ></i>
                 ) : (
-                  // <Button 
-                  //   className="favorite"
-                  //   onClick={() => handleAdd(name)}
-                  // >
-                  //   <i class="fa-regular fa-heart fa-lg"></i>
-                  // </Button>
                   <i
                     className="fa-regular fa-heart fa-lg"
                     onClick={() => handleAdd(name)}

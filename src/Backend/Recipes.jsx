@@ -1,4 +1,5 @@
-// : {
+
+// "": {
 //   name: "",
 //   ingredients: {"": ""},
 //   instructions: [""],
@@ -34,6 +35,24 @@ const lunch = {
       "Serve and enjoy!",
     ],
     notes: ["I usually skip the peas and carrots"],
+  },
+  'Shrimp-Scampi' : {
+    name: "Shrimp Scampi",
+    ingredients: {"olive oil": "2 tablespoons",
+  'butter': '4 tablespoons',
+  'garlic': '4-5 cloves',
+  'large shrimp': '1 1/4 lbs',
+  'salt and pepper': 'To taste',
+  'dry white wine': '1/4 cup',
+  'crushed red pepper flakes': '1/2 teaspoon',
+  'lemon juice': '2 tablespoons',
+  'parsley, chopped': '1/4 cup'},
+    instructions: ["Heat olive oil and 2 tablespoons of butter in a large pan or skillet. Add garlic and saute until fragrant (about a minute).",
+  'Add shrimp, season with salt and pepper and saute for 1-2 minutes on one side until just turning pink.',
+  'Flip the shrimp. Add wine and pepper flakes, simmer 1-2 minutes or until wine is reduced to about half and shrimp is cooked through.',
+  'Stir in lemon juice, parsley, and remaining butter then take offf heat immediately.',
+  'Serve over noodles, rice, or steamed veggies.'],
+    notes: ["You can sub the wine for chicken broth"],
   },
 };
 const dinner = {
@@ -114,8 +133,8 @@ const dinner = {
     },
     instructions: [
       "Mix the Marinade: Combine soy sauce, lime juice, avocado oil, red wine, brown sugar, chili powder, garlic, cumin, and black pepper in a medium bowl and whisk to combine. Transfer 3/4 cup (120ml) marinade to a large bowl and set aside.",
-      "Place steaks in a gallon-sized zipper-lock bag and add remaining marinade. Seal bag, squeezing out as much air as possible. Massage bag until meat is fully coated in marinade. Lay flat in the refrigerator, turning every couple of hours, for at least 3 hours and up to 10.",
-      "Toss peppers and onion in bowl with reserved 1/2 cup marinade. Refrigerate until ready to use.",
+      "Place steaks in a gallon-sized zipper-lock bag and add remaining marinade. Seal bag, squeezing out as much air as possible. Massage bag until meat is fully coated in marinade. Lay flat in the refrigerator, turning every couple of hours, for at least 3 hours.",
+      "Toss peppers and onion in bowl with reserved marinade. Refrigerate until ready to use.",
       "When ready to cook, pour marinade from steak into a cast iron skillet and heat.",
       "Cook beef until just browned on both sides. Remove to a plate and set aside, retaining the juices",
       "Add vegitables with marinade to pan. Cook until tender and most of the liquid has evaporated.",
@@ -125,6 +144,29 @@ const dinner = {
       "Warm tortillas for serving. Enjoy!",
     ],
     notes: [""],
+  },
+  "Tomato-Sauce": {
+    name: "Tomato Sauce",
+    ingredients: {
+      tomatos: "4 lbs",
+      "unsalted butter": "6 tablespoons",
+      "olive oil": "4 tablespoons",
+      onions: "2",
+      garlic: "4 cloves",
+      salt: "1 1/4 teaspoons",
+      sugar: "1 teaspoon",
+      basil: "2 tablespoons",
+    },
+    instructions: [
+      "Bring a large pot of water to boil and set a side a large bowl about halfway full with ice water.",
+      "Cut a 1/4 inch deep x on one end of each tomato. Place tomatos into the boiling water (I ike to use a spoon to gently place them in) and boil 1-2 minutes until the skin splits.",
+      "Use a spoon to remove the tomatos from the boiling water and place them in the ice bath. Let cool 1-2 minutes, gently peel the skin with your hands and discard.",
+      "Cut the tomatos into 1/2 inch chunks, discarding the cores, and transfer them to a sauce pan.",
+      "Add butter, olive oil, onions, garlic, salt, and sugar to the tomatos. If using dried basil, add it now. Bring the mixture to a gentle boil, then reduce heat and simmer for 1 1/2 to 2 1/2 hours, stirring occasionally.",
+      "Once the sauce is no longer wattery, strain the liquid into another pan and use a potato masher to mash any strained chunks. Add the mash back to the liquid. If using fresh basil, add it now.",
+      "Season to taste and serve.",
+    ],
+    notes: ["Add 4 cups of chicken broth for a creamy tomato soup."],
   },
 };
 const sweets = {

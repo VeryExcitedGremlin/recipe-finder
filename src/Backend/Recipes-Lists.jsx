@@ -1,3 +1,4 @@
+
 // {
 //   name: '', 
 //   link: '', 
@@ -15,6 +16,13 @@ const lunch = [
     img: placeholder,
     description: "A great use for leftover chicken or rice.",
   },
+  {
+    name: 'Shrimp Scampi',
+    link: 'Shrimp-Scampi',
+    img: placeholder,
+    description: 'Garlic buttery with a white wine and lemon sauce.',
+    filter: ['pasta', 'shrimp']
+  },
 ];
 
 const dinner = [
@@ -23,7 +31,7 @@ const dinner = [
     link: "Beef-Stroganoff",
     img: placeholder,
     description: "My go-to favorite! Easy and delicious.",
-    filter: ["beef", "noodles"],
+    filter: ["beef", "pasta"],
   },
   {
     name: "Whole Turkey",
@@ -33,11 +41,18 @@ const dinner = [
     filter: ["holiday", "whole bird"],
   },
   {
-    name: 'Steak Fajitas',
-    link: 'Steak-Fajitas',
+    name: "Steak Fajitas",
+    link: "Steak-Fajitas",
     img: placeholder,
-    description: 'Prep the night before for tender marinated steak.',
-    filter: ['marinade', 'beef', 'peppers']
+    description: "Prep the night before for tender marinated steak.",
+    filter: ["marinade", "beef"],
+  },
+  {
+    name: 'Tomato Sauce',
+    link: 'Tomato-Sauce',
+    img: placeholder,
+    description: 'Savory and delicious. Takes a couple hours.',
+    filter: ['pasta']
   },
 ];
 

@@ -52,7 +52,7 @@ export default function ShowCategoryCards({
         showCards.style.display = "block";
       }
     });
-  }, [category, favorites]);
+  }, [category, favorites, favoritesPage]);
 
   if (data) {
     function filterData(data) {
@@ -104,7 +104,7 @@ export default function ShowCategoryCards({
         </Row>
         <Row
           id="card-container"
-          className="justify-content-center inner-section"
+          className="justify-content-center align-items-center inner-section"
           style={{ borderRadius: "0 0 2em 2em" }}
         >
           <Spinner
@@ -112,7 +112,7 @@ export default function ShowCategoryCards({
             animation="border"
             style={{ display: "none", color: "#e079c0" }}
           />
-          <div id="cards">{cards[0] ? cards : <CardPalceholder />}</div>
+          {cards[0] ? cards : <CardPalceholder />}
         </Row>
       </Container>
     );

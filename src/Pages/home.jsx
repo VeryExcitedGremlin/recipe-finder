@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Container } from "react-bootstrap";
 
 import CategoryPicker from "../Components/Picker/Cat-Picker";
 import ShowCategoryCards from "../Components/Show-Category-Cards/Show-Category-Cards";
@@ -11,10 +12,11 @@ export default function HomePage({ handlers, category, favoritesPage }) {
   }
 
   return (
-    <div className="outer-section">
+    <Container className="outer-section row px-0 justify-content-center">
+      {/* <div>{favoritesPage && <h2 className="pt-4">Favorites</h2>}</div> */}
       <CategoryPicker handlers={handlers} category={category} handleFilter={handleFilter} />
 
       <ShowCategoryCards category={category} favoritesPage={favoritesPage} passFilter={[useFilter, handleFilter]} />
-    </div>
+    </Container>
   );
 }
