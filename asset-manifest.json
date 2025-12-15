@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/recipe-finder/static/css/main.60de06d5.css",
-    "main.js": "/recipe-finder/static/js/main.b5b65473.js",
+    "main.css": "/recipe-finder/static/css/main.0499d602.css",
+    "main.js": "/recipe-finder/static/js/main.c943c3f3.js",
     "static/js/859.737b9b14.chunk.js": "/recipe-finder/static/js/859.737b9b14.chunk.js",
     "index.html": "/recipe-finder/index.html",
-    "main.60de06d5.css.map": "/recipe-finder/static/css/main.60de06d5.css.map",
-    "main.b5b65473.js.map": "/recipe-finder/static/js/main.b5b65473.js.map",
+    "main.0499d602.css.map": "/recipe-finder/static/css/main.0499d602.css.map",
+    "main.c943c3f3.js.map": "/recipe-finder/static/js/main.c943c3f3.js.map",
     "859.737b9b14.chunk.js.map": "/recipe-finder/static/js/859.737b9b14.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60de06d5.css",
-    "static/js/main.b5b65473.js"
+    "static/css/main.0499d602.css",
+    "static/js/main.c943c3f3.js"
   ]
 }
