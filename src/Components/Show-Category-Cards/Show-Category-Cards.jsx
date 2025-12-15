@@ -49,7 +49,7 @@ export default function ShowCategoryCards({
       setData(response.data);
       if (spinner && showCards) {
         spinner.style.display = "none";
-        showCards.style.display = "block";
+        showCards.style.display = "flex";
       }
     });
   }, [category, favorites, favoritesPage]);
@@ -90,11 +90,7 @@ export default function ShowCategoryCards({
 
     return (
       <Container>
-        <Row
-          className={
-            filters[0] ? "justify-content-end" : "justify-content-center"
-          }
-        >
+        <Row className="justify-content-end mt-2">
           <h2 className="col-6 mb-4">
             {capitalizeFirstLetter(useFilter || category)}
           </h2>
@@ -104,7 +100,7 @@ export default function ShowCategoryCards({
         </Row>
         <Row
           id="card-container"
-          className="justify-content-center align-items-center inner-section"
+          className="justify-content-center inner-section"
           style={{ borderRadius: "0 0 2em 2em" }}
         >
           <Spinner
@@ -112,7 +108,9 @@ export default function ShowCategoryCards({
             animation="border"
             style={{ display: "none", color: "#e079c0" }}
           />
-          {cards[0] ? cards : <CardPalceholder />}
+          <Row id='cards' className="justify-content-center align-items-center">
+            {cards[0] ? cards : <CardPalceholder />}
+          </Row>
         </Row>
       </Container>
     );
