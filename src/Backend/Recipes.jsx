@@ -55,6 +55,7 @@ const lunch = {
     notes: ["You can sub the wine for chicken broth"],
   },
 };
+
 const dinner = {
   "Beef-Stroganoff": {
     name: "Beef Stroganoff",
@@ -169,6 +170,7 @@ const dinner = {
     notes: ["Add 4 cups of chicken broth for a creamy tomato soup."],
   },
 };
+
 const sweets = {
   "Chocolate-Chip-Cookies": {
     name: "Chocolate Chip Cookies",

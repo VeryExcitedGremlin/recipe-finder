@@ -41,8 +41,10 @@ export default function ShowCategoryCards({
   useEffect(() => {
     const spinner = document.getElementById("spinner");
     const showCards = document.getElementById("cards");
-    if (spinner && showCards) {
+    if (spinner) {
       spinner.style.display = "block";
+    }
+    if (showCards) {
       showCards.style.display = "none";
     }
     FalseAPI(category, favoritesPage, favorites).then((response) => {

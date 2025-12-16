@@ -1,14 +1,40 @@
 import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
 
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { Spinner } from "react-bootstrap";
 
-import content from "../Backend/Recipes";
+import FalseRecipeAPI from "../Backend/FalseRecipeAPI";
 
 export default function Recipe({ category }) {
+  const [recipe, setRecipe] = useState({
+    name: "name",
+    ingredients: {},
+    instructions: [],
+    notes: [],
+  });
   const { recipeId } = useParams();
-  const recipe = content[category][recipeId];
+  // const recipe = content[category][recipeId];
+
+  useEffect(() => {
+    const spinner = document.getElementById("spinner");
+    const showRecipe = document.getElementById("show-recipe");
+    if (spinner && showRecipe) {
+      spinner.style.display = "block";
+      showRecipe.style.display = "none";
+    }
+    FalseRecipeAPI(category, recipeId).then((response) => {
+      setRecipe(response.data);
+      if (spinner && showRecipe) {
+        spinner.style.display = "none";
+        showRecipe.style.display = "block";
+      }
+
+    });
+  }, [recipeId]);
+
   const {name, ingredients, instructions, notes} = recipe 
 
   const ingredientKeys = Object.keys(ingredients);
@@ -34,13 +60,19 @@ export default function Recipe({ category }) {
 
   return (
     <div>
-      <Container className="outer-section">
+        <Container
+            id="spinner" style={{ display: "none" }} className="outer-section justify-content-center p-3 row">
+          <Spinner
+            animation="border"
+            style={{ color: "#e079c0" }}
+          />
+        </Container>
+      <Container id="show-recipe" className="outer-section">
         <Row className="inner-section" style={{ borderRadius: "2em 2em 0 0" }}>
           <h1 className="py-2">{name}</h1>
         </Row>
 
         <Row className="justify-content-center p-3">
-
           <Col xs="auto" sm="6">
             <Row className="justify-content-center">
               <h2
@@ -68,11 +100,9 @@ export default function Recipe({ category }) {
           {notes[0] == "" || (
             <Col sm="6">
               <Row className="justify-content-center">
-                <h2 className="col col-sm-10 pt-4 pb-1 text-start">
-                  Notes
-                </h2>
+                <h2 className="col col-sm-10 pt-4 pb-1 text-start">Notes</h2>
               </Row>
-              
+
               <Row className="justify-content-center">
                 <ul className="col col-sm-10">{notesList}</ul>
               </Row>

@@ -1,29 +1,53 @@
-
 // {
-//   name: '', 
-//   link: '', 
-//   img: placeholder, 
-//   description: '', 
+//   name: '',
+//   link: '',
+//   img: placeholder,
+//   description: '',
 //   filter: ['']
 // },
 
 const placeholder = "https://placehold.co/50";
 
+function Card(name, img, desc, filter) {
+  this.name = name;
+  this.link = name.replaceAll(" ", "-");
+  this.img = img;
+  this.description = desc;
+  this.filter = filter;
+}
+
 const lunch = [
-  {
-    name: "Chicken Fried Rice",
-    link: "Chicken-Fried-Rice",
-    img: placeholder,
-    description: "A great use for leftover chicken or rice.",
-  },
-  {
-    name: 'Shrimp Scampi',
-    link: 'Shrimp-Scampi',
-    img: placeholder,
-    description: 'Garlic buttery with a white wine and lemon sauce.',
-    filter: ['pasta', 'shrimp']
-  },
+  // chick, shrimp
+  // {
+  //   name: "Chicken Fried Rice",
+  //   link: "Chicken-Fried-Rice",
+  //   img: placeholder,
+  //   description: "A great use for leftover chicken or rice.",
+  // },
+  // {
+  //   name: "Shrimp Scampi",
+  //   link: "Shrimp-Scampi",
+  //   img: placeholder,
+  //   description: "Garlic buttery with a white wine and lemon sauce.",
+  //   filter: ["pasta", "shrimp"],
+  // },
 ];
+  lunch.push(
+    new Card(
+      "Chicken Fried Rice",
+      placeholder,
+      "A great use for leftover chicken or rice.",
+      ['chicken', 'rice']
+    )
+  );
+  lunch.push(
+    new Card(
+      "Shrimp Scampi",
+      placeholder,
+      "Garlic buttery with a white wine and lemon sauce.",
+      ["pasta", "shrimp"]
+    )
+  );
 
 const dinner = [
   {
@@ -48,11 +72,11 @@ const dinner = [
     filter: ["marinade", "beef"],
   },
   {
-    name: 'Tomato Sauce',
-    link: 'Tomato-Sauce',
+    name: "Tomato Sauce",
+    link: "Tomato-Sauce",
     img: placeholder,
-    description: 'Savory and delicious. Takes a couple hours.',
-    filter: ['pasta']
+    description: "Savory and delicious. Takes a couple hours.",
+    filter: ["pasta"],
   },
 ];
 
