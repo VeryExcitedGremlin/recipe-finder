@@ -1,10 +1,3 @@
-// new Card(
-//   "",
-//   placeholder,
-//   "",
-//   [""]
-// );
-
 const placeholder = "https://placehold.co/50";
 
 class Card {
@@ -18,6 +11,7 @@ class Card {
 }
 
 const lunch = [];
+
 lunch.push(
   new Card(
     "Chicken Fried Rice",
@@ -33,56 +27,53 @@ lunch.push(
   )
 );
 
-const dinner = [
-  {
-    name: "Beef Stroganoff",
-    link: "Beef-Stroganoff",
-    img: placeholder,
-    description: "My go-to favorite! Easy and delicious.",
-    filter: ["beef", "pasta"],
-  },
-  {
-    name: "Whole Turkey",
-    link: "Whole-Turkey",
-    img: placeholder,
-    description: "Great for the holidays!",
-    filter: ["holiday", "whole bird"],
-  },
-  {
-    name: "Steak Fajitas",
-    link: "Steak-Fajitas",
-    img: placeholder,
-    description: "Prep the night before for tender marinated steak.",
-    filter: ["marinade", "beef"],
-  },
-  {
-    name: "Tomato Sauce",
-    link: "Tomato-Sauce",
-    img: placeholder,
-    description: "Savory and delicious. Takes a couple hours.",
-    filter: ["pasta"],
-  },
-];
+const dinner = [];
 
-const sweets = [
-  {
-    name: "Chocolate Chip Cookies",
-    link: "Chocolate-Chip-Cookies",
-    img: placeholder,
-    description: "Oh so soft and chewy.",
-    filter: ["dessert", "cookies"],
-  },
-  {
-    name: "Pancakes",
-    link: "Pancakes",
-    img: placeholder,
-    description: "A breakfast classic!",
-    filter: ["breakfast"],
-  },
-];
+dinner.push(
+  new Card(
+    "Beef Stroganoff",
+    placeholder,
+    "My go-to favorite! Easy and delicious.",
+    ["beef", "pasta"]
+  ),
+  new Card("Whole Turkey", placeholder, "Great for the holidays!", [
+    "holiday",
+    "whole bird",
+  ]),
+  new Card(
+    "Steak Fajitas",
+    placeholder,
+    "Prep the night before for tender marinated steak.",
+    ["marinade", "beef"]
+  ),
+  new Card(
+    "Tomato Sauce",
+    placeholder,
+    "Savory and delicious. Takes a couple hours.",
+    ["pasta"]
+  )
+);
+
+const sweets = [];
+
+sweets.push(
+  new Card("Chocolate Chip Cookies", placeholder, "Oh so soft and chewy.", [
+    "dessert",
+    "cookies",
+  ]),
+  new Card("Pancakes", placeholder, "A breakfast classic!", ["breakfast"])
+);
 
 export default {
   lunch: lunch,
   dinner: dinner,
   sweets: sweets,
 };
+
+// ,
+// new Card(
+//   "",
+//   placeholder,
+//   "",
+//   []
+// )

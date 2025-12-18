@@ -49,23 +49,26 @@ export default function ShowCategoryCards({
     }
     FalseAPI(category, favoritesPage, favorites).then((response) => {
       setData(response.data);
-      if (spinner && showCards) {
+      if (spinner) {
         spinner.style.display = "none";
+      }
+      if (showCards) {
         showCards.style.display = "flex";
       }
     });
   }, [category, favorites, favoritesPage]);
 
-  if (data) {
-    function filterData(data) {
-      if (useFilter) {
-        return data.filter((recipe) => {
-          return recipe.filter.includes(useFilter);
-        });
-      } else {
-        return data;
-      }
+  function filterData(data) {
+    if (useFilter) {
+      return data.filter((recipe) => {
+        return recipe.filter.includes(useFilter);
+      });
+    } else {
+      return data;
     }
+  }
+
+  if (data) {
     const newData = filterData(data);
 
     const cards = newData.map((recipe, i) => (
@@ -92,28 +95,48 @@ export default function ShowCategoryCards({
 
     return (
       <Container>
-        <Row className="justify-content-end align-items-center mt-2 mb-4">
-          {<h2 className="col-6 mb-0 pe-0">
-            {capitalizeFirstLetter(category)} {useFilter && `(${capitalizeFirstLetter(useFilter)})`}
-          </h2>}
+        <Row className={`${!filters[0] ? 'justify-content-center' : 'justify-content-end'} align-items-center mt-2 mb-4`}>
+          {
+            <h2 className="col-6 mb-0 pe-0">
+              {capitalizeFirstLetter(category)}{" "}
+              {useFilter && `(${capitalizeFirstLetter(useFilter)})`}
+            </h2>
+          }
           {!filters[0] || (
-            <CatPickerSecondary filters={filters} handleFilter={handleFilter} useFilter={useFilter}/>
+            <CatPickerSecondary
+              filters={filters}
+              handleFilter={handleFilter}
+              useFilter={useFilter}
+            />
           )}
         </Row>
         <Row
           id="card-container"
-          className="justify-content-center inner-section p-0"
+          className="justify-content-center inner-section p-0 py-4"
         >
           <Spinner
             id="spinner"
             animation="border"
             style={{ display: "none", color: "#e079c0" }}
           />
-          <Row id="cards" className="justify-content-center align-items-center p-0">
+          <Row
+            id="cards"
+            className="justify-content-center align-items-center p-0"
+          >
             {cards[0] ? cards : <CardPalceholder />}
           </Row>
         </Row>
       </Container>
     );
+  } else {
+    return (
+      <Row className="inner-section justify-content-center">
+        <Spinner
+          animation="border"
+          style={{ color: "#e079c0" }}
+        />
+      </Row>
+    );
   }
 }
+// }
