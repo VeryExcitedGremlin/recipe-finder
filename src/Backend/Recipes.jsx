@@ -1,4 +1,3 @@
-
 // "": {
 //   name: "",
 //   ingredients: {"": ""},
@@ -36,22 +35,26 @@ const lunch = {
     ],
     notes: ["I usually skip the peas and carrots"],
   },
-  'Shrimp-Scampi' : {
+  "Shrimp-Scampi": {
     name: "Shrimp Scampi",
-    ingredients: {"olive oil": "2 tablespoons",
-  'butter': '4 tablespoons',
-  'garlic': '4-5 cloves',
-  'large shrimp': '1 1/4 lbs',
-  'salt and pepper': 'To taste',
-  'dry white wine': '1/4 cup',
-  'crushed red pepper flakes': '1/2 teaspoon',
-  'lemon juice': '2 tablespoons',
-  'parsley, chopped': '1/4 cup'},
-    instructions: ["Heat olive oil and 2 tablespoons of butter in a large pan or skillet. Add garlic and saute until fragrant (about a minute).",
-  'Add shrimp, season with salt and pepper and saute for 1-2 minutes on one side until just turning pink.',
-  'Flip the shrimp. Add wine and pepper flakes, simmer 1-2 minutes or until wine is reduced to about half and shrimp is cooked through.',
-  'Stir in lemon juice, parsley, and remaining butter then take offf heat immediately.',
-  'Serve over noodles, rice, or steamed veggies.'],
+    ingredients: {
+      "olive oil": "2 tablespoons",
+      butter: "4 tablespoons",
+      garlic: "4-5 cloves",
+      "large shrimp": "1 1/4 lbs",
+      "salt and pepper": "To taste",
+      "dry white wine": "1/4 cup",
+      "crushed red pepper flakes": "1/2 teaspoon",
+      "lemon juice": "2 tablespoons",
+      "parsley, chopped": "1/4 cup",
+    },
+    instructions: [
+      "Heat olive oil and 2 tablespoons of butter in a large pan or skillet. Add garlic and saute until fragrant (about a minute).",
+      "Add shrimp, season with salt and pepper and saute for 1-2 minutes on one side until just turning pink.",
+      "Flip the shrimp. Add wine and pepper flakes, simmer 1-2 minutes or until wine is reduced to about half and shrimp is cooked through.",
+      "Stir in lemon juice, parsley, and remaining butter then take offf heat immediately.",
+      "Serve over noodles, rice, or steamed veggies.",
+    ],
     notes: ["You can sub the wine for chicken broth"],
   },
 };
@@ -197,7 +200,11 @@ const sweets = {
       "Let cool on the pan until stiff (about 30 minutes)",
       "Enjoy!",
     ],
-    notes: ["Use a hand or stand mixer for the best results"],
+    notes: [
+      "Use a hand or stand mixer for the best results",
+      "Instead of white and brown sugar, I use 1 cup of white sugar with a teaspoon of molasses.",
+      "The dough should be stiff, not wet. If it's sticky, add a little flour at a time until it stiffens."
+    ],
   },
   Pancakes: {
     name: "Pancakes",

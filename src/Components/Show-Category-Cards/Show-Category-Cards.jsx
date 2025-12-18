@@ -92,25 +92,24 @@ export default function ShowCategoryCards({
 
     return (
       <Container>
-        <Row className="justify-content-end mt-2">
-          <h2 className="col-6 mb-4">
-            {capitalizeFirstLetter(useFilter || category)}
-          </h2>
+        <Row className="justify-content-end align-items-center mt-2 mb-4">
+          {<h2 className="col-6 mb-0 pe-0">
+            {capitalizeFirstLetter(category)} {useFilter && `(${capitalizeFirstLetter(useFilter)})`}
+          </h2>}
           {!filters[0] || (
-            <CatPickerSecondary filters={filters} handleFilter={handleFilter} />
+            <CatPickerSecondary filters={filters} handleFilter={handleFilter} useFilter={useFilter}/>
           )}
         </Row>
         <Row
           id="card-container"
-          className="justify-content-center inner-section"
-          style={{ borderRadius: "0 0 2em 2em" }}
+          className="justify-content-center inner-section p-0"
         >
           <Spinner
             id="spinner"
             animation="border"
             style={{ display: "none", color: "#e079c0" }}
           />
-          <Row id='cards' className="justify-content-center align-items-center">
+          <Row id="cards" className="justify-content-center align-items-center p-0">
             {cards[0] ? cards : <CardPalceholder />}
           </Row>
         </Row>

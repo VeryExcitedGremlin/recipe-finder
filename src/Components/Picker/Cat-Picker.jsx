@@ -12,8 +12,8 @@ export default function CategoryPicker({ handlers, category, handleFilter }) {
   return (
     <>
       {/* <Container> */}
-      <Row className="p-2 pt-4">
-        <ButtonGroup>
+      <Row className="p-0 pt-4 pb-3">
+        <ButtonGroup className="px-2 px-sm-4 px-md-5 py-md-3">
           <Button
             className={category == "lunch" ? "btn active" : "btn"}
             id="lunch-btn"

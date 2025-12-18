@@ -46,26 +46,23 @@ ol li {
   z-index: 3;
 }
 
-/* .favorite {
-  background-color: white;
-  border-radius: 30px;
-  height: 3.25em;
-} */
-
 Link {
   z-index: 100;
 }
 
 .outer-section {
+    box-sizing: border-box;
     background-color: rgb(255, 250, 243);
+    border: 0.5em solid bisque;
     border-radius: 2em;
     margin: 3em 0;
     filter: drop-shadow(0em 0em 0.5em rgba(0, 0, 0, 0.205));
-    width: 90vw;
+    width: 80vw;
 }
 
 .inner-section {
     background-color: rgb(255, 236, 214);
-    border: 0.5em solid bisque;
+    border-top: 0.5em solid bisque;
+    border-radius: 0 0 1.5em 1.5em;
     padding: 2em 1em;
 }
