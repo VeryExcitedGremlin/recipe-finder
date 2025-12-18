@@ -5,10 +5,19 @@
 //   notes: [""],
 // },
 
+class Recipe {
+  constructor(name, ingredients, instructions, notes) {
+    (this.name = name),
+      (this.ingredients = ingredients),
+      (this.instructions = instructions),
+      (this.notes = notes);
+  }
+}
+
 const lunch = {
-  "Chicken-Fried-Rice": {
-    name: "Chicken Fried Rice",
-    ingredients: {
+  "Chicken-Fried-Rice": new Recipe(
+    "Chicken Fried Rice",
+    {
       "chicken breast, diced": "3/4 - 1 lb",
       butter: "4-8 tbsp",
       "sesame oil": "2 tbsp",
@@ -21,7 +30,7 @@ const lunch = {
       "soy-sauce": "3 tbsp",
       "salt and pepper": "To taste",
     },
-    instructions: [
+    [
       "Heat butter over medium-high heat, add chicken once hot",
       "Season with salt and pepper and saute until cooked through, about 5-6 minutes",
       "Transfer chicken to a plate and set aside",
@@ -33,11 +42,11 @@ const lunch = {
       "Heat and stir 1-2 minutes until combined",
       "Serve and enjoy!",
     ],
-    notes: ["I usually skip the peas and carrots"],
-  },
-  "Shrimp-Scampi": {
-    name: "Shrimp Scampi",
-    ingredients: {
+    ["I usually skip the peas and carrots"]
+  ),
+  "Shrimp-Scampi": new Recipe(
+    "Shrimp Scampi",
+    {
       "olive oil": "2 tablespoons",
       butter: "4 tablespoons",
       garlic: "4-5 cloves",
@@ -48,21 +57,21 @@ const lunch = {
       "lemon juice": "2 tablespoons",
       "parsley, chopped": "1/4 cup",
     },
-    instructions: [
+    [
       "Heat olive oil and 2 tablespoons of butter in a large pan or skillet. Add garlic and saute until fragrant (about a minute).",
       "Add shrimp, season with salt and pepper and saute for 1-2 minutes on one side until just turning pink.",
       "Flip the shrimp. Add wine and pepper flakes, simmer 1-2 minutes or until wine is reduced to about half and shrimp is cooked through.",
       "Stir in lemon juice, parsley, and remaining butter then take offf heat immediately.",
       "Serve over noodles, rice, or steamed veggies.",
     ],
-    notes: ["You can sub the wine for chicken broth"],
-  },
+    ["You can sub the wine for chicken broth"]
+  ),
 };
 
 const dinner = {
-  "Beef-Stroganoff": {
-    name: "Beef Stroganoff",
-    ingredients: {
+  "Beef-Stroganoff": new Recipe(
+    "Beef Stroganoff",
+    {
       "steak, cut into strips": "1 lb",
       "red wine": "1/2 cup",
       "unsalted butter": "8 tbsp",
@@ -78,7 +87,7 @@ const dinner = {
       "salt and pepper": "To taste",
       "egg noodles": "8-12 oz",
     },
-    instructions: [
+    [
       "Add wine and butter to a deep pan, heat over medium-high heat. Add beef once hot",
       "Cook beef until just browned on both sides. Remove to a plate and set aside, retaining the juices",
       "Add olive oil. Once hot, add onion and cook about 5-10 minutes",
@@ -91,14 +100,14 @@ const dinner = {
       "Return the beef and any juices back to the pan, simmer until beef is heated through",
       "Serve over egg noodles",
     ],
-    notes: [
+    [
       "You can substitute the yogurt for 1/4 cup sour cream + 3/4 cups heavy cream",
       "Serve over mashed potatos instead for a super creamy and delicious twist on a classic",
-    ],
-  },
-  "Whole-Turkey": {
-    name: "Whole Turkey",
-    ingredients: {
+    ]
+  ),
+  "Whole-Turkey": new Recipe(
+    "Whole Turkey",
+    {
       "whole turkey": "14 lbs",
       "olive oil": "1 tablespoon",
       sage: "1 tablespoon",
@@ -106,7 +115,7 @@ const dinner = {
       paprika: "2 teaspoons",
       "salt and pepper": "To taste",
     },
-    instructions: [
+    [
       "Place oven rack in lowest position. Preheat oven to 325°F",
       "Place turkey in pan breast-side up and brush with oil. Sprinkle seasoning mixture evenly over turkey. Cover loosely with heavy duty foil",
       "Roast 2 hours, adding an extra 15 minutes per pound for larger turkeys",
@@ -114,11 +123,11 @@ const dinner = {
       "Remove turkey from oven. Let stand 20 minutes",
       "Transfer to platter or carving board and slice. Reserve pan juices to make gravy or to serve with turkey",
     ],
-    notes: ["For easy cleanup, line roasting pan with heavy duty foil"],
-  },
-  "Steak-Fajitas": {
-    name: "Steak Fajitas",
-    ingredients: {
+    ["For easy cleanup, line roasting pan with heavy duty foil"]
+  ),
+  "Steak-Fajitas": new Recipe(
+    "Steak Fajitas",
+    {
       "soy sauce": "1/2 cup",
       "lime juice": "1/2 cup",
       "avocado oil": "1/2 cup",
@@ -135,7 +144,7 @@ const dinner = {
       "beef broth": "1/2 cup",
       "tortillas, sour cream, and shredded cheese": "For serving",
     },
-    instructions: [
+    [
       "Mix the Marinade: Combine soy sauce, lime juice, avocado oil, red wine, brown sugar, chili powder, garlic, cumin, and black pepper in a medium bowl and whisk to combine. Transfer 3/4 cup (120ml) marinade to a large bowl and set aside.",
       "Place steaks in a gallon-sized zipper-lock bag and add remaining marinade. Seal bag, squeezing out as much air as possible. Massage bag until meat is fully coated in marinade. Lay flat in the refrigerator, turning every couple of hours, for at least 3 hours.",
       "Toss peppers and onion in bowl with reserved marinade. Refrigerate until ready to use.",
@@ -147,11 +156,11 @@ const dinner = {
       "Add back the beef and any accumulated juices, stir until warm.",
       "Warm tortillas for serving. Enjoy!",
     ],
-    notes: [""],
-  },
-  "Tomato-Sauce": {
-    name: "Tomato Sauce",
-    ingredients: {
+    [""]
+  ),
+  "Tomato-Sauce": new Recipe(
+    "Tomato Sauce",
+    {
       tomatos: "4 lbs",
       "unsalted butter": "6 tablespoons",
       "olive oil": "4 tablespoons",
@@ -161,7 +170,7 @@ const dinner = {
       sugar: "1 teaspoon",
       basil: "2 tablespoons",
     },
-    instructions: [
+    [
       "Bring a large pot of water to boil and set a side a large bowl about halfway full with ice water.",
       "Cut a 1/4 inch deep x on one end of each tomato. Place tomatos into the boiling water (I ike to use a spoon to gently place them in) and boil 1-2 minutes until the skin splits.",
       "Use a spoon to remove the tomatos from the boiling water and place them in the ice bath. Let cool 1-2 minutes, gently peel the skin with your hands and discard.",
@@ -170,14 +179,14 @@ const dinner = {
       "Once the sauce is no longer wattery, strain the liquid into another pan and use a potato masher to mash any strained chunks. Add the mash back to the liquid. If using fresh basil, add it now.",
       "Season to taste and serve.",
     ],
-    notes: ["Add 4 cups of chicken broth for a creamy tomato soup."],
-  },
+    ["Add 4 cups of chicken broth for a creamy tomato soup."]
+  ),
 };
 
 const sweets = {
-  "Chocolate-Chip-Cookies": {
-    name: "Chocolate Chip Cookies",
-    ingredients: {
+  "Chocolate-Chip-Cookies": new Recipe(
+    "Chocolate Chip Cookies",
+    {
       "salted butter": "8 tablespoons",
       "white sugar": "1/2 cup",
       "packed light brown sugar": "1/4 cup",
@@ -188,7 +197,7 @@ const sweets = {
       salt: "1/4 teaspoon",
       "chocolate chips": "3/4 cup",
     },
-    instructions: [
+    [
       "Preheat oven to 350 degrees",
       "Melt butter in microwave for 40-60 seconds",
       "Beat butter with sugars until creamy",
@@ -200,15 +209,15 @@ const sweets = {
       "Let cool on the pan until stiff (about 30 minutes)",
       "Enjoy!",
     ],
-    notes: [
+    [
       "Use a hand or stand mixer for the best results",
       "Instead of white and brown sugar, I use 1 cup of white sugar with a teaspoon of molasses.",
-      "The dough should be stiff, not wet. If it's sticky, add a little flour at a time until it stiffens."
-    ],
-  },
-  Pancakes: {
-    name: "Pancakes",
-    ingredients: {
+      "The dough should be stiff, not wet. If it's sticky, add a little flour at a time until it stiffens.",
+    ]
+  ),
+  Pancakes: new Recipe(
+    "Pancakes",
+    {
       "All-purpose flour": "1 1/2 cups",
       "baking powder": "3 1/2 teaspoons",
       sugar: "1 tablespoon",
@@ -217,7 +226,7 @@ const sweets = {
       "butter (melted)": "3 tablespoons",
       egg: 1,
     },
-    instructions: [
+    [
       "Sift flour, baking powder, sugar, and salt together in a large bowl",
       "Make a well in the center, add milk, butter, and egg; mix until smooth",
       "Lightly oil griddle or pan and heat over medium-high heat",
@@ -225,8 +234,8 @@ const sweets = {
       "Flip and cook until browned",
       "Repeat with remaining batter, makes about 8",
     ],
-    notes: [""],
-  },
+    [""]
+  ),
 };
 
 export default {
