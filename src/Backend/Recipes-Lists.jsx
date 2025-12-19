@@ -10,9 +10,7 @@ class Card {
   }
 }
 
-const lunch = [];
-
-lunch.push(
+const lunch = [
   new Card(
     "Chicken Fried Rice",
     placeholder,
@@ -24,12 +22,10 @@ lunch.push(
     placeholder,
     "Garlic buttery with a white wine and lemon sauce.",
     ["pasta", "shrimp"]
-  )
-);
+  ),
+];
 
-const dinner = [];
-
-dinner.push(
+const dinner = [
   new Card(
     "Beef Stroganoff",
     placeholder,
@@ -51,18 +47,16 @@ dinner.push(
     placeholder,
     "Savory and delicious. Takes a couple hours.",
     ["pasta"]
-  )
-);
+  ),
+];
 
-const sweets = [];
-
-sweets.push(
+const sweets = [
   new Card("Chocolate Chip Cookies", placeholder, "Oh so soft and chewy.", [
     "dessert",
     "cookies",
   ]),
-  new Card("Pancakes", placeholder, "A breakfast classic!", ["breakfast"])
-);
+  new Card("Pancakes", placeholder, "A breakfast classic!", ["breakfast"]),
+];
 
 export default {
   lunch: lunch,

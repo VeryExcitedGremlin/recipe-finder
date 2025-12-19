@@ -1,21 +1,44 @@
-// "": {
-//   name: "",
-//   ingredients: {"": ""},
-//   instructions: [""],
-//   notes: [""],
-// },
-
 class Recipe {
   constructor(name, ingredients, instructions, notes) {
-    (this.name = name),
-      (this.ingredients = ingredients),
-      (this.instructions = instructions),
-      (this.notes = notes);
+    this[name.replaceAll(" ", "-")] = {
+      name: name,
+      ingredients: ingredients,
+      instructions: instructions,
+      notes: notes,
+    };
   }
 }
 
-const lunch = {
-  "Chicken-Fried-Rice": new Recipe(
+const lunch = {};
+
+Object.assign(
+  lunch,
+  new Recipe(
+    "Shrimp Scampi",
+    {
+      "olive oil": "2 tablespoons",
+      butter: "4 tablespoons",
+      garlic: "4-5 cloves",
+      "large shrimp": "1 1/4 lbs",
+      "salt and pepper": "To taste",
+      "dry white wine": "1/4 cup",
+      "crushed red pepper flakes": "1/2 teaspoon",
+      "lemon juice": "2 tablespoons",
+      "parsley, chopped": "1/4 cup",
+    },
+    [
+      "Heat olive oil and 2 tablespoons of butter in a large pan or skillet. Add garlic and saute until fragrant (about a minute).",
+      "Add shrimp, season with salt and pepper and saute for 1-2 minutes on one side until just turning pink.",
+      "Flip the shrimp. Add wine and pepper flakes, simmer 1-2 minutes or until wine is reduced to about half and shrimp is cooked through.",
+      "Stir in lemon juice, parsley, and remaining butter then take offf heat immediately.",
+      "Serve over noodles, rice, or steamed veggies.",
+    ],
+    ["You can sub the wine for chicken broth"]
+  )
+);
+Object.assign(
+  lunch,
+  new Recipe(
     "Chicken Fried Rice",
     {
       "chicken breast, diced": "3/4 - 1 lb",
@@ -43,33 +66,14 @@ const lunch = {
       "Serve and enjoy!",
     ],
     ["I usually skip the peas and carrots"]
-  ),
-  "Shrimp-Scampi": new Recipe(
-    "Shrimp Scampi",
-    {
-      "olive oil": "2 tablespoons",
-      butter: "4 tablespoons",
-      garlic: "4-5 cloves",
-      "large shrimp": "1 1/4 lbs",
-      "salt and pepper": "To taste",
-      "dry white wine": "1/4 cup",
-      "crushed red pepper flakes": "1/2 teaspoon",
-      "lemon juice": "2 tablespoons",
-      "parsley, chopped": "1/4 cup",
-    },
-    [
-      "Heat olive oil and 2 tablespoons of butter in a large pan or skillet. Add garlic and saute until fragrant (about a minute).",
-      "Add shrimp, season with salt and pepper and saute for 1-2 minutes on one side until just turning pink.",
-      "Flip the shrimp. Add wine and pepper flakes, simmer 1-2 minutes or until wine is reduced to about half and shrimp is cooked through.",
-      "Stir in lemon juice, parsley, and remaining butter then take offf heat immediately.",
-      "Serve over noodles, rice, or steamed veggies.",
-    ],
-    ["You can sub the wine for chicken broth"]
-  ),
-};
+  )
+);
 
-const dinner = {
-  "Beef-Stroganoff": new Recipe(
+const dinner = {};
+
+Object.assign(
+  dinner,
+  new Recipe(
     "Beef Stroganoff",
     {
       "steak, cut into strips": "1 lb",
@@ -104,8 +108,11 @@ const dinner = {
       "You can substitute the yogurt for 1/4 cup sour cream + 3/4 cups heavy cream",
       "Serve over mashed potatos instead for a super creamy and delicious twist on a classic",
     ]
-  ),
-  "Whole-Turkey": new Recipe(
+  )
+);
+Object.assign(
+  dinner,
+  new Recipe(
     "Whole Turkey",
     {
       "whole turkey": "14 lbs",
@@ -124,8 +131,11 @@ const dinner = {
       "Transfer to platter or carving board and slice. Reserve pan juices to make gravy or to serve with turkey",
     ],
     ["For easy cleanup, line roasting pan with heavy duty foil"]
-  ),
-  "Steak-Fajitas": new Recipe(
+  )
+);
+Object.assign(
+  dinner,
+  new Recipe(
     "Steak Fajitas",
     {
       "soy sauce": "1/2 cup",
@@ -157,8 +167,11 @@ const dinner = {
       "Warm tortillas for serving. Enjoy!",
     ],
     [""]
-  ),
-  "Tomato-Sauce": new Recipe(
+  )
+);
+Object.assign(
+  dinner,
+  new Recipe(
     "Tomato Sauce",
     {
       tomatos: "4 lbs",
@@ -180,11 +193,14 @@ const dinner = {
       "Season to taste and serve.",
     ],
     ["Add 4 cups of chicken broth for a creamy tomato soup."]
-  ),
-};
+  )
+);
 
-const sweets = {
-  "Chocolate-Chip-Cookies": new Recipe(
+const sweets = {};
+
+Object.assign(
+  sweets,
+  new Recipe(
     "Chocolate Chip Cookies",
     {
       "salted butter": "8 tablespoons",
@@ -214,8 +230,11 @@ const sweets = {
       "Instead of white and brown sugar, I use 1 cup of white sugar with a teaspoon of molasses.",
       "The dough should be stiff, not wet. If it's sticky, add a little flour at a time until it stiffens.",
     ]
-  ),
-  Pancakes: new Recipe(
+  )
+);
+Object.assign(
+  sweets,
+  new Recipe(
     "Pancakes",
     {
       "All-purpose flour": "1 1/2 cups",
@@ -235,11 +254,22 @@ const sweets = {
       "Repeat with remaining batter, makes about 8",
     ],
     [""]
-  ),
-};
+  )
+);
 
 export default {
   lunch: lunch,
   dinner: dinner,
   sweets: sweets,
 };
+
+
+// Object.assign(
+//  , new Recipe(
+//   "",
+//   {"": ""},
+//   [""],
+//   [""],
+//  )
+// );
+

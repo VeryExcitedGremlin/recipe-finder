@@ -9,12 +9,14 @@ import { Spinner } from "react-bootstrap";
 import FalseRecipeAPI from "../Backend/FalseRecipeAPI";
 
 export default function Recipe({ category }) {
-  const [recipe, setRecipe] = useState({
-    name: "name",
-    ingredients: {},
-    instructions: [],
-    notes: [],
-  });
+  const [recipe, setRecipe] = useState(
+  //   {
+  //   name: "name",
+  //   ingredients: {},
+  //   instructions: [],
+  //   notes: [],
+  // }
+);
   const { recipeId } = useParams();
   // const recipe = content[category][recipeId];
 
@@ -34,8 +36,9 @@ export default function Recipe({ category }) {
     });
   }, [recipeId]);
 
-  let name, ingredients, instructions, notes;
+  // let name, ingredients, instructions, notes;
   if (recipe) {
+    // console.log(recipe)
     let { name, ingredients, instructions, notes } = recipe;
 
     const ingredientKeys = Object.keys(ingredients);
@@ -131,7 +134,8 @@ export default function Recipe({ category }) {
   } else {
     return (
       <Container
-        style={{ display: "none" }}
+        id="spinner"
+        // style={{ display: "none" }}
         className="outer-section justify-content-center p-3 row"
       >
         <Spinner animation="border" style={{ color: "#e079c0" }} />
