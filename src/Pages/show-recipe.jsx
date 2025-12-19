@@ -8,17 +8,19 @@ import { Spinner } from "react-bootstrap";
 
 import FalseRecipeAPI from "../Backend/FalseRecipeAPI";
 
-export default function Recipe({ category }) {
-  const [recipe, setRecipe] = useState(
-  //   {
-  //   name: "name",
-  //   ingredients: {},
-  //   instructions: [],
-  //   notes: [],
-  // }
-);
-  const { recipeId } = useParams();
-  // const recipe = content[category][recipeId];
+export default function Recipe() {
+  const [recipe, setRecipe] = useState({
+    name: "",
+    ingredients: {},
+    instructions: [],
+    notes: [],
+  });
+
+  const { cat, recipeId } = useParams();
+
+  function handleRecipe(newRecipe) {
+    setRecipe(newRecipe);
+  }
 
   useEffect(() => {
     const spinner = document.getElementById("spinner");
@@ -27,8 +29,8 @@ export default function Recipe({ category }) {
       spinner.style.display = "block";
       showRecipe.style.display = "none";
     }
-    FalseRecipeAPI(category, recipeId).then((response) => {
-      setRecipe(response.data);
+    FalseRecipeAPI(cat, recipeId).then((response) => {
+      handleRecipe(response.data);
       if (spinner && showRecipe) {
         spinner.style.display = "none";
         showRecipe.style.display = "block";
@@ -36,9 +38,17 @@ export default function Recipe({ category }) {
     });
   }, [recipeId]);
 
-  // let name, ingredients, instructions, notes;
-  if (recipe) {
-    // console.log(recipe)
+  if (!recipe) {
+    return (
+      <Container
+        id="spinner"
+        style={{ display: "none" }}
+        className="outer-section justify-content-center p-3 row"
+      >
+        <Spinner animation="border" style={{ color: "#e079c0" }} />
+      </Container>
+    );
+  } else {
     let { name, ingredients, instructions, notes } = recipe;
 
     const ingredientKeys = Object.keys(ingredients);
@@ -61,7 +71,6 @@ export default function Recipe({ category }) {
         <p>{instruction}</p>
       </li>
     ));
-
     return (
       <div>
         <Container
@@ -130,16 +139,6 @@ export default function Recipe({ category }) {
           </Row>
         </Container>
       </div>
-    );
-  } else {
-    return (
-      <Container
-        id="spinner"
-        // style={{ display: "none" }}
-        className="outer-section justify-content-center p-3 row"
-      >
-        <Spinner animation="border" style={{ color: "#e079c0" }} />
-      </Container>
     );
   }
 }

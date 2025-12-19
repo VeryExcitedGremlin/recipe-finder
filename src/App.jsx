@@ -81,8 +81,8 @@ function App() {
           }
         />
         <Route
-          path="/recipe-finder/recipe/:recipeId"
-          element={<Recipe category={state.category} />}
+          path="/recipe-finder/:cat/:recipeId"
+          element={<Recipe />}
         />
         <Route path="/recipe-finder/*" element={<NotFound />} />
       </Routes>

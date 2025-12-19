@@ -10,8 +10,9 @@ export default function RecipeListCard({ recipe, handlers, favorites }) {
   if (recipe) {
     const [handleAdd, handleRemove] = handlers;
     const { name, link, img, description } = recipe;
+    const [cat, recipeId] = link;
     const favorited = favorites.includes(name);
-    const recipeLink = `recipe/${link}`
+    const recipeLink = `${cat}/${recipeId}`;
     
     return (
       <Col xs="12" sm="6" md='4' lg='3'>
