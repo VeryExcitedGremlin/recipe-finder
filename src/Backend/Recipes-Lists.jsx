@@ -12,6 +12,7 @@ class Card {
 
 const lunch = [];
 let cat = 'lunch';
+
 lunch.push(
   new Card(
     "Chicken Fried Rice",
@@ -26,11 +27,13 @@ lunch.push(
     placeholder,
     "Garlic buttery with a white wine and lemon sauce.",
     ["pasta", "shrimp"]
-  )
+  ),
+  new Card("Beef and Broccoli", cat, placeholder, "", ['beef', 'rice'])
 );
 
 const dinner = [];
 cat = 'dinner';
+
 dinner.push(
   new Card(
     "Beef Stroganoff",
@@ -58,8 +61,10 @@ dinner.push(
     ["pasta"]
   )
 );
-cat = 'sweets';
+
 const sweets = [];
+cat = 'sweets';
+
 sweets.push(
   new Card(
     "Chocolate Chip Cookies",
@@ -72,6 +77,7 @@ sweets.push(
     "breakfast",
   ])
 );
+
 
 export default {
   lunch: lunch,

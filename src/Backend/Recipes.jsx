@@ -10,9 +10,10 @@ class Recipe {
 }
 
 const lunch = {};
+let obj = lunch;
 
 Object.assign(
-  lunch,
+  obj,
   new Recipe(
     "Shrimp Scampi",
     {
@@ -37,7 +38,7 @@ Object.assign(
   )
 );
 Object.assign(
-  lunch,
+  obj,
   new Recipe(
     "Chicken Fried Rice",
     {
@@ -68,11 +69,43 @@ Object.assign(
     ["I usually skip the peas and carrots"]
   )
 );
+Object.assign(
+  obj,
+  new Recipe(
+    "Beef and Broccoli",
+    {
+      ginger: "1 teaspoon",
+      garlic: "2 teaspoons",
+      "hot water": "1/2 cup",
+      "soy sauce": "6 tablespoons",
+      "light brown sugar": "3 tablespoons",
+      "corn starch": "1 1/2 tablespoons",
+      "black pepper": "1/4 teaspoon",
+      "sesame oil": "2 tablespoons",
+      steak: "1 pound",
+      "olive oil": "2 tablespoons",
+      broccoli: "1 pound",
+      "sesame seeds": "2 teaspoons",
+    },
+    ["Combine ginger, garlic, water, soy sauce, brown sugar, corn starch, pepper and sesame oil in a large container with a lid",
+      'Slice steak into strips about 2 inches long and let rest in the sauce until ready to cook',
+      'Heat 1 tbsp olive oil over medim heat. Add broccoli and cook 4-5 minutes, partially covered and stirring occassionally, until light green and tender. Remove and set aside',
+      'Increase heat to high and add remaining olive oil. Remove beef from sauce and saute 2 minutes per side, or until just cooked through. Pull out a piece to check for doneness',
+      'Add the sauce, reduce heat to medium-low and simmer 3-4 minutes until thickened',
+      'Add broccoli and stir to combine. Add 1-2 tbsp water to thin sauce if desired',
+      'Serve over white rice. Enjoy!'  
+    ],
+    ["Start your rice first so it's ready!",
+      'For softer broccoli, add 2 tbsp water before covering to steam'
+    ]
+  )
+);
 
 const dinner = {};
+obj = dinner;
 
 Object.assign(
-  dinner,
+  obj,
   new Recipe(
     "Beef Stroganoff",
     {
@@ -111,7 +144,7 @@ Object.assign(
   )
 );
 Object.assign(
-  dinner,
+  obj,
   new Recipe(
     "Whole Turkey",
     {
@@ -134,7 +167,7 @@ Object.assign(
   )
 );
 Object.assign(
-  dinner,
+  obj,
   new Recipe(
     "Steak Fajitas",
     {
@@ -170,7 +203,7 @@ Object.assign(
   )
 );
 Object.assign(
-  dinner,
+  obj,
   new Recipe(
     "Tomato Sauce",
     {
@@ -197,9 +230,10 @@ Object.assign(
 );
 
 const sweets = {};
+obj = sweets;
 
 Object.assign(
-  sweets,
+  obj,
   new Recipe(
     "Chocolate Chip Cookies",
     {
@@ -233,7 +267,7 @@ Object.assign(
   )
 );
 Object.assign(
-  sweets,
+  obj,
   new Recipe(
     "Pancakes",
     {
@@ -263,13 +297,11 @@ export default {
   sweets: sweets,
 };
 
-
 // Object.assign(
-//  , new Recipe(
+//  obj, new Recipe(
 //   "",
 //   {"": ""},
 //   [""],
 //   [""],
 //  )
 // );
-
