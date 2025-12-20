@@ -94,13 +94,14 @@ export default function Recipe() {
           </Row>
 
           <Row className="justify-content-center p-3">
-            <Col xs="auto" sm="6">
-              <Row className="justify-content-center">
+            <Col sm="6">
+              <Row className="justify-content-start justify-content-md-center">
                 <h2
                   className={
-                    notes[0] == ""
-                      ? "col-6 py-4 text-start"
-                      : "col-12 col-sm-11 col-md-9 col-lg-7 col-xl-5 ps-4 ps-sm-0 pt-4 pb-2 text-start"
+                    // notes[0] == ""
+                    //   ? "col-6 py-4 text-start"
+                    //   :
+                    "col-12 col-sm-11 col-md-9 col-lg-7 col-xl-5 ps-3 ps-sm-2 ps-md-0 py-4 text-start"
                   }
                 >
                   Ingredients
@@ -110,8 +111,8 @@ export default function Recipe() {
                 <ul
                   className={
                     notes[0] == ""
-                      ? "col-auto"
-                      : "col-auto col-sm-11 col-md-9 col-lg-7 col-xl-5 ps-4 ps-sm-0"
+                      ? "col-11"
+                      : "col-11 col-sm-11 col-md-9 col-lg-7 col-xl-5 ps-4 ps-sm-0"
                   }
                 >
                   {ingredientsList}
@@ -120,12 +121,14 @@ export default function Recipe() {
             </Col>
             {notes[0] == "" || (
               <Col sm="6">
-                <Row className="justify-content-center">
-                  <h2 className="col col-sm-10 pt-4 pb-1 text-start">Notes</h2>
+                <Row className="justify-content-start">
+                  <h2 className="col col-sm-10 ps-3 ps-sm-2 ps-lg-4 py-4 text-start">
+                    Notes
+                  </h2>
                 </Row>
 
                 <Row className="justify-content-center">
-                  <ul className="col col-sm-10">{notesList}</ul>
+                  <ul className="col-11 ps-4 ps-sm-0">{notesList}</ul>
                 </Row>
               </Col>
             )}
