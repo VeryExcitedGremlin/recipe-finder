@@ -71,11 +71,10 @@ sweets.push(
     cat,
     placeholder,
     "Oh so soft and chewy.",
-    ["dessert", "cookies"]
+    ["dessert", "cookies", 'chocolate']
   ),
-  new Card("Pancakes", cat, placeholder, "A breakfast classic!", [
-    "breakfast",
-  ])
+  new Card("Pancakes", cat, placeholder, "A breakfast classic!", ["breakfast"]),
+  new Card("Peppermint Bark", cat, placeholder, "A minty winter classic", ['dessert', 'chocolate'])
 );
 
 

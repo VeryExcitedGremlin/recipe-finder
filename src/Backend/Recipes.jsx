@@ -87,16 +87,18 @@ Object.assign(
       broccoli: "1 pound",
       "sesame seeds": "2 teaspoons",
     },
-    ["Combine ginger, garlic, water, soy sauce, brown sugar, corn starch, pepper and sesame oil in a large container with a lid",
-      'Slice steak into strips about 2 inches long and let rest in the sauce until ready to cook',
-      'Heat 1 tbsp olive oil over medim heat. Add broccoli and cook 4-5 minutes, partially covered and stirring occassionally, until light green and tender. Remove and set aside',
-      'Increase heat to high and add remaining olive oil. Remove beef from sauce and saute 2 minutes per side, or until just cooked through. Pull out a piece to check for doneness',
-      'Add the sauce, reduce heat to medium-low and simmer 3-4 minutes until thickened',
-      'Add broccoli and stir to combine. Add 1-2 tbsp water to thin sauce if desired',
-      'Serve over white rice. Enjoy!'  
+    [
+      "Combine ginger, garlic, water, soy sauce, brown sugar, corn starch, pepper and sesame oil in a large container with a lid",
+      "Slice steak into strips about 2 inches long and let rest in the sauce until ready to cook",
+      "Heat 1 tbsp olive oil over medim heat. Add broccoli and cook 4-5 minutes, partially covered and stirring occassionally, until light green and tender. Remove and set aside",
+      "Increase heat to high and add remaining olive oil. Remove beef from sauce and saute 2 minutes per side, or until just cooked through. Pull out a piece to check for doneness",
+      "Add the sauce, reduce heat to medium-low and simmer 3-4 minutes until thickened",
+      "Add broccoli and stir to combine. Add 1-2 tbsp water to thin sauce if desired",
+      "Serve over white rice. Enjoy!",
     ],
-    ["Start your rice first so it's ready!",
-      'For softer broccoli, add 2 tbsp water before covering to steam'
+    [
+      "Start your rice first so it's ready!",
+      "For softer broccoli, add 2 tbsp water before covering to steam",
     ]
   )
 );
@@ -288,6 +290,35 @@ Object.assign(
       "Repeat with remaining batter, makes about 8",
     ],
     [""]
+  )
+);
+Object.assign(
+  obj,
+  new Recipe(
+    "Peppermint Bark",
+    {
+      "white chocolate, coarsely chopped": "12 ounces",
+      "semi-sweet or bittersweet chocolate, coarsely chopped": "6 ounces",
+      "vegetable oil or coconut oil": "1 1/2 tsp",
+      "peppermint extract": "1/2 tsp",
+      "regular-size candy canes, crushed": "2-3",
+    },
+    [
+      "Line the bottom and sides of a 8-inch or 9-inch square baking pan with parchment paper or aluminum foil, smoothing out any wrinkles. Or use a lined baking sheet. Set aside.",
+      "Place 6 ounces of white chocolate in a small heatproof bowl or a liquid measuring cup. Add 1/2 teaspoon of oil. Melt in 20-second increments, stirring vigorously with a silicone spatula or spoon after each increment, until completely melted and smooth. White chocolate and chocolate overheat easily, so it’s important to do this in increments.",
+      "Once melted, stir in 1/4 teaspoon peppermint extract. Pour melted white chocolate into the prepared baking pan, and, with an offset spatula or spoon, spread into a thin smooth layer.",
+      "Place the baking pan in the refrigerator for 10–15 minutes or until almost completely set. If it sets completely, the bark layers could separate. ",
+      "Place semi-sweet chocolate in a small heatproof bowl or a liquid measuring cup. Add 1/2 teaspoon of oil. Repeat melting, just as you did with the white chocolate in step 2.",
+      "Once melted, stir in remaining 1/4 teaspoon peppermint extract. Pour all of the semi-sweet chocolate over the white chocolate layer and spread it into a smooth layer. Place the baking pan back in the refrigerator for 10–15 minutes or until almost completely set.",
+      "Place the remaining white chocolate in a small heatproof bowl or a liquid measuring cup. Add last 1/2 teaspoon of oil. Repeat melting, just as you did with the other layers. Pour over the bark layers and spread into a smooth layer. (This layer will not have peppermint extract.)",
+      "Sprinkle evenly with crushed candy canes.",
+      "Refrigerate the bark until completely set, about 1 hour.",
+      "Once hardened, remove from the pan and peel off the foil or parchment. Break or cut into pieces as large or as small as you want. If your bark chilled in the refrigerator for longer than 3–4 hours, let it sit at room temperature for 10–15 minutes to slightly soften before breaking/slicing. (Or else the layers might separate.)",
+      "Cover and store leftover bark in the refrigerator for up to 3 weeks. The bark can be left at room temperature for a few days in colder months, but it gets a little soft.",
+    ],
+    [
+      "To crush candy canes, place the unwrapped candy canes in a sealed zipped-top bag and roll or bang with a rolling pin or meat mallet until crushed.",
+    ]
   )
 );
 
