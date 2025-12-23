@@ -102,6 +102,37 @@ Object.assign(
     ]
   )
 );
+Object.assign(
+  obj,
+  new Recipe(
+    "Chicken Alfredo",
+    {
+      "boneless, skinless chicken breasts": "2",
+      "italian seasoning": "2 tsp",
+      "olive oil": "1 tbsp",
+      butter: "2 tbsp",
+      "garlic, minced": "4 cloves",
+      "heavy cream": "1 cup",
+      "grated parmesan": "3/4 cup",
+      "salt and pepper": "To taste",
+      "chopped parsley, for garnish": "1 tbsp",
+      fettuccine: "8 oz",
+    },
+    [
+      "Start the pasta first, reserving 1/2 cup of the starchy water before draining",
+      "Season both sides of the chicken breast with italian seasoning and a pinch of salt",
+      "Heat oil in a large skillet over medium heat. Add chicken and cook 7-8 minutes each side, or until browned and cooked through",
+      "Remove chicken to a plate and turn heat to medium-low",
+      "Add butter and minced garlic to the skillet. Stir and cook 1-2 minutes until fragrant, scraping up any bits from the bottom of the pan",
+      "Add heavy cream and wisk to combine, allowing to come to a simmer",
+      "Once simmering, add grated parmesan. Whisk and stir until the parmesan has melted into the sauce",
+      "Simmer the sauce for a few minutes, or until slightly thickened. Add salt and pepper to taste",
+      "Add the pasta to the sauce and stir to combine. If the sauce becomes to othisk add 1-2 tbsp of pasta water at a time until at your preffered consistencey",
+      "Slice the chicken breast and serve atop the pasta. Garnish with parsley if desired",
+    ],
+    [""]
+  )
+);
 
 const dinner = {};
 obj = dinner;
@@ -228,6 +259,29 @@ Object.assign(
       "Season to taste and serve.",
     ],
     ["Add 4 cups of chicken broth for a creamy tomato soup."]
+  )
+);
+Object.assign(
+  obj,
+  new Recipe(
+    "Roast Chicken",
+    {
+      "whole chicken, giblets removed": "4-5 lbs",
+      "olive oil": "4 tbsp",
+      "Italian seasoning": "1/2 tsp",
+      "salt and pepper": "To taste",
+    },
+    [
+      "Preheat oven to 425 and place rack in lower 1/3",
+      "Place chicken breast side up in an oven-safe pan. Pat chicken dry with a paper towel",
+      "Drizzle chicken with 1 tbsp oil and spread with hands or a basting brush",
+      "Sprinkle with salt, pepper, and italian seasoning. Drizzle with 1 tbsp oil and rub in with hands or basting brush",
+      "Roast the chicken for 70-90 minutes, or until the juices run clear, flipping every 20-30 minutes",
+      "After the first flip, season the other side just like the first (oil, seasoning, oil, spread)",
+      "Check the chicken for doneness witha thermometer placed in the thickest part of the thigh. It should read 165",
+      "Let the chicken rest for 15 minutes on a cutting board before slicing",
+    ],
+    [""]
   )
 );
 

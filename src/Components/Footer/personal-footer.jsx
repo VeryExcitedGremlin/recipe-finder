@@ -9,19 +9,29 @@ export default function PersonalFooter({ handleLunch }) {
       <div>Posted by Ashton Oder 2025</div>
       <br />
       <nav>
-        <li><a href="#top">Back to Top</a></li>
-        <li>
-          <Link onClick={handleLunch} to="/recipe-finder">
+        <li className="px-3" style={{ display: "inline" }}>
+          <Link
+            style={{ display: "inline" }}
+            onClick={handleLunch}
+            to="/recipe-finder"
+          >
             Recipes Homepage
           </Link>
         </li>
-        <li>
-          <Link onClick={handleLunch} to="/recipe-finder/favorites">
+        <li className="px-3" style={{ display: "inline" }}>
+          <a style={{ display: "inline" }} href="#top">Back to Top</a>
+        </li>
+        <li className="px-3" style={{ display: "inline" }}>
+          <Link
+            style={{ display: "inline" }}
+            onClick={handleLunch}
+            to="/recipe-finder/favorites"
+          >
             Favorite Recipes
           </Link>
         </li>
-        <li>
-          <a href="https://veryexcitedgremlin.github.io/">
+        <li style={{ display: "inline" }}>
+          <a className="py-2" href="https://veryexcitedgremlin.github.io/">
             Return to Projects Homepage
           </a>
         </li>

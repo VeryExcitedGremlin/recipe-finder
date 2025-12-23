@@ -80,8 +80,6 @@ export default function ShowCategoryCards({
       />
     ));
 
-    // console.log(!cards[0])
-
     function checkFilters() {
       let filters = [];
       data.forEach((recipe) => {
@@ -97,7 +95,7 @@ export default function ShowCategoryCards({
       <Container>
         <Row className={`${!filters[0] ? 'justify-content-center' : 'justify-content-end'} align-items-center mt-2 mb-4`}>
           {
-            <h2 className="col-6 mb-0 pe-0">
+            <h2 className="col-6 mb-0 p-0">
               {capitalizeFirstLetter(category)}{" "}
               {useFilter && `(${capitalizeFirstLetter(useFilter)})`}
             </h2>

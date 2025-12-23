@@ -11,7 +11,7 @@ class Card {
 }
 
 const lunch = [];
-let cat = 'lunch';
+let cat = "lunch";
 
 lunch.push(
   new Card(
@@ -28,11 +28,25 @@ lunch.push(
     "Garlic buttery with a white wine and lemon sauce.",
     ["pasta", "shrimp"]
   ),
-  new Card("Beef and Broccoli", cat, placeholder, "", ['beef', 'rice'])
+  new Card("Beef and Broccoli", cat, placeholder, "", ["beef", "rice"]),
+  new Card(
+    "Chicken Alfredo",
+    cat,
+    placeholder,
+    "Tender chicken with a creamy cheese sauce",
+    ["chicken", "pasta"]
+  ),
+  new Card(
+    "Swedish Meatballs",
+    cat,
+    placeholder,
+    "Juicy meatballs in a savory gravy, serve with noodles or mashed potatos",
+    ['ground meat', 'pasta']
+  )
 );
 
 const dinner = [];
-cat = 'dinner';
+cat = "dinner";
 
 dinner.push(
   new Card(
@@ -59,11 +73,15 @@ dinner.push(
     placeholder,
     "Savory and delicious. Takes a couple hours.",
     ["pasta"]
-  )
+  ),
+  new Card("Roast Chicken", cat, placeholder, "An easy dinner staple", [
+    "whole bird",
+    "chicken",
+  ])
 );
 
 const sweets = [];
-cat = 'sweets';
+cat = "sweets";
 
 sweets.push(
   new Card(
@@ -71,12 +89,15 @@ sweets.push(
     cat,
     placeholder,
     "Oh so soft and chewy.",
-    ["dessert", "cookies", 'chocolate']
+    ["dessert", "cookies", "chocolate"]
   ),
   new Card("Pancakes", cat, placeholder, "A breakfast classic!", ["breakfast"]),
-  new Card("Peppermint Bark", cat, placeholder, "A minty winter classic", ['dessert', 'chocolate'])
+  new Card("Peppermint Bark", cat, placeholder, "A minty winter classic", [
+    "dessert",
+    "chocolate",
+    "holiday",
+  ])
 );
-
 
 export default {
   lunch: lunch,
@@ -86,7 +107,7 @@ export default {
 
 // ,
 // new Card(
-//   "", 
+//   "",
 //   cat,
 //   placeholder,
 //   "",
