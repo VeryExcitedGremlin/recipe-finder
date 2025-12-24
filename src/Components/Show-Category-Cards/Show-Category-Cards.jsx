@@ -119,7 +119,7 @@ export default function ShowCategoryCards({
           />
           <Row
             id="cards"
-            className="justify-content-center align-items-center p-0"
+            className="justify-content-center align-items-center p-0 col-lg-11"
           >
             {cards[0] ? cards : <CardPalceholder />}
           </Row>

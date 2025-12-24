@@ -15,7 +15,7 @@ export default function RecipeListCard({ recipe, handlers, favorites }) {
     const recipeLink = `${cat}/${recipeId}`;
     
     return (
-      <Col xs="12" sm="6" md='4' lg='3'>
+      <Col xs="12" sm="6" md='4' className="p-xxl-4">
         <Card className="m-3">
           <Card.Header>
             <Row className="justify-content-end">
