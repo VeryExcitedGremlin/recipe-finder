@@ -96,7 +96,9 @@ sweets.push(
     "dessert",
     "chocolate",
     "holiday",
-  ])
+  ]),
+  new Card("Spice Cake", cat, placeholder, "Not too sweet, perfect for the holidays", ['holiday', 'cake']),
+  new Card("Cream Cheese Icing", cat, placeholder, "Great on cakes or cinnamon rolls", ['icing'])
 );
 
 export default {

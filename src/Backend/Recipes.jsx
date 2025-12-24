@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 class Recipe {
   constructor(name, ingredients, instructions, notes) {
     this[name.replaceAll(" ", "-")] = {
@@ -151,29 +152,30 @@ Object.assign(
       allspice: "1/4 tsp",
       nutmeg: "1/4 tsp",
       "salt and pepper": "To taste",
-      butter: '4 tbsp',
-      flour: '4 tbsp',
-      'beef broth': '2 cups',
-      'chicken bouillon': '1 cube',
-      'Worcestershire sauce': '2 tsp',
-      'Dijon mustard': '1 tsp',
-      'dry parsley': '1 tsp',
-      'sour cream': '1/2 cup'
+      butter: "4 tbsp",
+      flour: "4 tbsp",
+      "beef broth": "2 cups",
+      "chicken bouillon": "1 cube",
+      "Worcestershire sauce": "2 tsp",
+      "Dijon mustard": "1 tsp",
+      "dry parsley": "1 tsp",
+      "sour cream": "1/2 cup",
     },
-    ["Add 1 tbsp olive oil to a high-walled skillet, heat over medium heat. Add the onion, cook and stir until caramelized",
-      'Add the garlic, cook 1-2 minutes until fragrant. Set aside and let cool.',
-      'In a large bowl, combine the breadcrumbs, parmesan cheese, whisked egg, milk, cooled onion mix, and spices',
-      'Gently incorporate the meat until combined evenly. Careful not to overwork the meat or the meatballs will be tough',
-      'Roll meat mixture into 1 1/2 inch meatballs and place onto a plate. Transfer to the fridge and let chill for at least 15 minutes up to overnight (cover if leaving overnight)',
-      'Combine beef broth, chicken bouillon, Worcestershire sauce, Dijon mustard, and parsley in a cup with a spout. Set aside',
-      'Heat remaining olive oil in the skillet over medium-high heat',
-      'Brown the meatballs in batches, leaving plenty of room to rotate them, about 1 minute per side. Remove and set aside',
-      'Melt the butter in the skillet over medim-high heat, scraping up the bits from the bottom of the pan',
-      'Stir in the flour and cook 2 mintutes, stirring continuously until it begins to brown',
-      'Add beef broth mixture in small splashes, stirring continuously. Once all the broth is added, bring it to a boil, then reduce to a simmer',
-      'Temper the sour cream by placing it into a bowl and stirring in some sauce (about 1/4 cup), before adding the mixture back to the sauce. Stir until combined',
-      'Add the meatballs back to the skillet, along with any juices accumulated on the plate. Cook partially covered until heated through, 10-15 minutes, while spooning the sauce on top',
-      'Serve over mashed potatos or egg noodles'
+    [
+      "Add 1 tbsp olive oil to a high-walled skillet, heat over medium heat. Add the onion, cook and stir until caramelized",
+      "Add the garlic, cook 1-2 minutes until fragrant. Set aside and let cool.",
+      "In a large bowl, combine the breadcrumbs, parmesan cheese, whisked egg, milk, cooled onion mix, and spices",
+      "Gently incorporate the meat until combined evenly. Careful not to overwork the meat or the meatballs will be tough",
+      "Roll meat mixture into 1 1/2 inch meatballs and place onto a plate. Transfer to the fridge and let chill for at least 15 minutes up to overnight (cover if leaving overnight)",
+      "Combine beef broth, chicken bouillon, Worcestershire sauce, Dijon mustard, and parsley in a cup with a spout. Set aside",
+      "Heat remaining olive oil in the skillet over medium-high heat",
+      "Brown the meatballs in batches, leaving plenty of room to rotate them, about 1 minute per side. Remove and set aside",
+      "Melt the butter in the skillet over medim-high heat, scraping up the bits from the bottom of the pan",
+      "Stir in the flour and cook 2 mintutes, stirring continuously until it begins to brown",
+      "Add beef broth mixture in small splashes, stirring continuously. Once all the broth is added, bring it to a boil, then reduce to a simmer",
+      "Temper the sour cream by placing it into a bowl and stirring in some sauce (about 1/4 cup), before adding the mixture back to the sauce. Stir until combined",
+      "Add the meatballs back to the skillet, along with any juices accumulated on the plate. Cook partially covered until heated through, 10-15 minutes, while spooning the sauce on top",
+      "Serve over mashed potatos or egg noodles",
     ],
     ["I use yogurt instead of sour cream, it doesn't need tempering"]
   )
@@ -338,14 +340,14 @@ Object.assign(
   new Recipe(
     "Chocolate Chip Cookies",
     {
-      "salted butter": "8 tablespoons",
+      "unsalted butter": "8 tablespoons",
       "white sugar": "1/2 cup",
       "packed light brown sugar": "1/4 cup",
       vanilla: "1 teaspoon",
       egg: 1,
       "all purpose flour": "1 1/2 cups",
       "baking soda": "1/2 teaspoon",
-      salt: "1/4 teaspoon",
+      salt: "1/2 teaspoon",
       "chocolate chips": "3/4 cup",
     },
     [
@@ -417,6 +419,60 @@ Object.assign(
     ],
     [
       "To crush candy canes, place the unwrapped candy canes in a sealed zipped-top bag and roll or bang with a rolling pin or meat mallet until crushed.",
+    ]
+  )
+);
+Object.assign(
+  obj,
+  new Recipe(
+    "Spice Cake",
+    {
+      "all purpose flour": "1 1/2 cups",
+      "white sugar": "3/4 cups",
+      "light brown sugar, packed": "1/4 cups",
+      "baking soda": "1 tsp",
+      cinnamon: "2 tsp",
+      nutmeg: "1 tsp",
+      ginger: "1 tsp",
+      allspice: "1/2 tsp",
+      "ground cloves": "1/4 tsp",
+      "vegetable or coconut oil": "1/3 cups",
+      vanilla: "1 tsp",
+      vinegar: "1 tsp",
+      water: "1 cup",
+    },
+    [
+      "Preheat the oven to 180C/350F. Grease an 8-inch cake pan with cooking spray and set aside",
+      "In a large mixing bowl, add the flour, white sugar, brown sugar, baking soda, salt, cinnamon, nutmeg, cloves, and allspice, and mix well",
+      "Add the oil, vanilla, vinegar, and water, and mix until combined",
+      "Transfer the batter into the greased cake pan. Bake for 25-30 minutes, or until a skewer comes out clean",
+      "Remove the cake from the oven and allow it to cool completely, before frosting",
+    ],
+    [
+      "You can use all white or all brown sugar. If you use the latter, your cake will be darker",
+      "The ingredients yield a single layer cake. If you’d like to make the cake as pictured, simply double the ingredients",
+      // `For icing, try ${<Link to={'recipe-finder/sweets/cream-cheese-icing'}>here!</Link>}`
+    ]
+  )
+);
+Object.assign(
+  obj,
+  new Recipe(
+    "Cream Cheese Icing",
+    {
+      "cream cheese": "4 oz",
+      "unsalted butter, room temp": "3 tbsp",
+      "of salt": "Dash",
+      "powdered sugar": "3/4 cup",
+      vanilla: "1 tsp",
+    },
+    [
+      "Add the cream cheese to a mixing bowl and mix with a hand mixer until very smootha nd free of lumps",
+      "Add butter, salt, powdered sugar, and vanilla. Mix on low speed until sugar is incorporated, then mix on medium high for 30 seconds until very smooth",
+    ],
+    [
+      "If your icing seems too thick, add about 1 tsp of milk",
+      "If it seems too thin, add a bit more sugar",
     ]
   )
 );
