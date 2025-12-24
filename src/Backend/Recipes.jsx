@@ -133,6 +133,51 @@ Object.assign(
     [""]
   )
 );
+Object.assign(
+  obj,
+  new Recipe(
+    "Swedish Meatballs",
+    {
+      "olive oil": "2 tbsp",
+      "ground beef": "3/4 lb",
+      "ground pork": "1/2 lb",
+      "onion, finely diced": "1",
+      garlic: "2 cloves",
+      "panko crumbs": "1/2 cup",
+      "parmesan cheese": "1/4 cup",
+      "large egg, whisked": "1",
+      milk: "1/3 cup",
+      oregano: "1/4 tsp",
+      allspice: "1/4 tsp",
+      nutmeg: "1/4 tsp",
+      "salt and pepper": "To taste",
+      butter: '4 tbsp',
+      flour: '4 tbsp',
+      'beef broth': '2 cups',
+      'chicken bouillon': '1 cube',
+      'Worcestershire sauce': '2 tsp',
+      'Dijon mustard': '1 tsp',
+      'dry parsley': '1 tsp',
+      'sour cream': '1/2 cup'
+    },
+    ["Add 1 tbsp olive oil to a high-walled skillet, heat over medium heat. Add the onion, cook and stir until caramelized",
+      'Add the garlic, cook 1-2 minutes until fragrant. Set aside and let cool.',
+      'In a large bowl, combine the breadcrumbs, parmesan cheese, whisked egg, milk, cooled onion mix, and spices',
+      'Gently incorporate the meat until combined evenly. Careful not to overwork the meat or the meatballs will be tough',
+      'Roll meat mixture into 1 1/2 inch meatballs and place onto a plate. Transfer to the fridge and let chill for at least 15 minutes up to overnight (cover if leaving overnight)',
+      'Combine beef broth, chicken bouillon, Worcestershire sauce, Dijon mustard, and parsley in a cup with a spout. Set aside',
+      'Heat remaining olive oil in the skillet over medium-high heat',
+      'Brown the meatballs in batches, leaving plenty of room to rotate them, about 1 minute per side. Remove and set aside',
+      'Melt the butter in the skillet over medim-high heat, scraping up the bits from the bottom of the pan',
+      'Stir in the flour and cook 2 mintutes, stirring continuously until it begins to brown',
+      'Add beef broth mixture in small splashes, stirring continuously. Once all the broth is added, bring it to a boil, then reduce to a simmer',
+      'Temper the sour cream by placing it into a bowl and stirring in some sauce (about 1/4 cup), before adding the mixture back to the sauce. Stir until combined',
+      'Add the meatballs back to the skillet, along with any juices accumulated on the plate. Cook partially covered until heated through, 10-15 minutes, while spooning the sauce on top',
+      'Serve over mashed potatos or egg noodles'
+    ],
+    ["I use yogurt instead of sour cream, it doesn't need tempering"]
+  )
+);
 
 const dinner = {};
 obj = dinner;
